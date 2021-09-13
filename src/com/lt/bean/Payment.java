@@ -2,7 +2,7 @@ package com.lt.bean;
 
 import java.util.Date;
 
-public class Billing {
+public class Payment {
 	
 	private int billNumber;
 	private Date billDate;
@@ -10,6 +10,7 @@ public class Billing {
 	private boolean paymentStatus;
 	private float billAmount;
 	private String paymentType;
+	private String paymentMethod;
 	
 	public final Date getBillDate() {
 		return billDate;
@@ -46,6 +47,12 @@ public class Billing {
 	}
 	public void setBillAmount(float billAmount) {
 		this.billAmount = billAmount;
+	}
+	public String getPaymentMethod() {
+		return paymentMethod;
+	}
+	public void setPaymentMethod(String paymentMethod) {
+		this.paymentMethod = paymentMethod;
 	}
 	
 }

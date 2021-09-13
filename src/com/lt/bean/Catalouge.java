@@ -1,6 +1,6 @@
 package com.lt.bean;
 
-public class CourseCatalouge {
+public class Catalouge {
 	private Course course;
 	private int courseCatalougeId;
 	
