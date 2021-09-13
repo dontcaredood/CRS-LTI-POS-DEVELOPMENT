@@ -1,11 +1,28 @@
 package com.lt.bean;
 
+import java.util.Date;
+
 public class Billing {
+	
 	private int billNumber;
+	private Date billDate;
 	private String description;
 	private boolean paymentStatus;
 	private float billAmount;
+	private String paymentType;
 	
+	public final Date getBillDate() {
+		return billDate;
+	}
+	public final void setBillDate(Date billDate) {
+		this.billDate = billDate;
+	}
+	public final String getPaymentType() {
+		return paymentType;
+	}
+	public final void setPaymentType(String paymentType) {
+		this.paymentType = paymentType;
+	}
 	public int getBillNumber() {
 		return billNumber;
 	}
