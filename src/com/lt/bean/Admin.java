@@ -1,6 +1,6 @@
 package com.lt.bean;
 
-public class Admin {
+public class Admin extends User {
 	
 	private int adminId;
 	private String adminName;

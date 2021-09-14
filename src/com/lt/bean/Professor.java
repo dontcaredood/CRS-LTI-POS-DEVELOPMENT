@@ -1,6 +1,6 @@
 package com.lt.bean;
 
-public class Professor {
+public class Professor extends User{
 	private int professorId;
 	private String professorName;
 	private String professorPassword;

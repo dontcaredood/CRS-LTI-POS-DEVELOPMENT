@@ -1,6 +1,13 @@
 package com.lt.bean;
 
-public class Student {
+public class Student extends User{
+	
+	public Student(){}
+	public Student(int id, String name, String department){
+		this.studentId = id;
+		this.studentName = name;
+		this.department = department;
+	}
 	private String studentName;
 	private int studentId;
 	private String department;

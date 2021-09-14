@@ -1,6 +1,7 @@
 package com.lt.bean;
 
 public class User {
+	
 	private int userId;
 	private String userType;
 	
