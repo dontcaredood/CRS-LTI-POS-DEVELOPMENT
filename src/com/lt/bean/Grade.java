@@ -1,6 +1,16 @@
 package com.lt.bean;
 
 public class Grade {
+	public Grade(){}
+	public Grade(int gId, boolean gStatus, int gPoints, int sId, String sName){
+		this.gradeId = gId;
+		this.gradeStatus = gStatus;
+		this.gradePoints = gPoints;
+		this.studentName = sName;
+		this.studentId = sId;
+		System.out.println("Student Id:\tStudent Name:\tGrade Points\tGrade Status");
+		System.out.println(sId+"\t\t"+sName+"\t\t"+gPoints+"\t\t"+gStatus);
+	}
 	private int gradeId;
 	private boolean gradeStatus;
 	private int gradePoints;
