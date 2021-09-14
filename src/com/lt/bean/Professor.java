@@ -5,30 +5,30 @@ public class Professor extends User{
 	private String professorName;
 	private String professorPassword;
 	private String professorDepartment;
-	
-	public final int getProfessorId() {
+	public int getProfessorId() {
 		return professorId;
 	}
-	public final void setProfessorId(int professorId) {
+	public void setProfessorId(int professorId) {
 		this.professorId = professorId;
 	}
-	public final String getProfessorName() {
+	public String getProfessorName() {
 		return professorName;
 	}
-	public final void setProfessorName(String professorName) {
+	public void setProfessorName(String professorName) {
 		this.professorName = professorName;
 	}
-	public final String getProfessorPassword() {
+	public String getProfessorPassword() {
 		return professorPassword;
 	}
-	public final void setProfessorPassword(String professorPassword) {
+	public void setProfessorPassword(String professorPassword) {
 		this.professorPassword = professorPassword;
 	}
-	public final String getProfessorDepartment() {
+	public String getProfessorDepartment() {
 		return professorDepartment;
 	}
-	public final void setProfessorDepartment(String professorDepartment) {
+	public void setProfessorDepartment(String professorDepartment) {
 		this.professorDepartment = professorDepartment;
 	}
+	
 	
 }

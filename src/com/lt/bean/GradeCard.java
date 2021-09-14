@@ -1,41 +1,40 @@
 package com.lt.bean;
 
-public class GradeCard {
+public class GradeCard extends Grade{
 	private boolean gradeStatus;
 	private String remarks;
 	private String studentName;
 	private String studentDepartment;
 	private int studentId;
-	
-	public final boolean isGradeStatus() {
+	public boolean isGradeStatus() {
 		return gradeStatus;
 	}
-	public final void setGradeStatus(boolean gradeStatus) {
+	public void setGradeStatus(boolean gradeStatus) {
 		this.gradeStatus = gradeStatus;
 	}
-	public final String getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
-	public final void setRemarks(String remarks) {
+	public void setRemarks(String remarks) {
 		this.remarks = remarks;
 	}
-	public final String getStudentName() {
+	public String getStudentName() {
 		return studentName;
 	}
-	public final void setStudentName(String studentName) {
+	public void setStudentName(String studentName) {
 		this.studentName = studentName;
 	}
-	public final String getStudentDepartment() {
+	public String getStudentDepartment() {
 		return studentDepartment;
 	}
-	public final void setStudentDepartment(String studentDepartment) {
+	public void setStudentDepartment(String studentDepartment) {
 		this.studentDepartment = studentDepartment;
 	}
-	public final int getStudentId() {
+	public int getStudentId() {
 		return studentId;
 	}
-	public final void setStudentId(int studentId) {
+	public void setStudentId(int studentId) {
 		this.studentId = studentId;
 	}
 	
-}
+	}
