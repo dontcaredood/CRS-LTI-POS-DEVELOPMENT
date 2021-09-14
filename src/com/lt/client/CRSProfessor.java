@@ -2,10 +2,13 @@ package com.lt.client;
 
 import java.util.Scanner;
 
+import com.lt.business.ProfessorInterfaceImpl;
+
 public class CRSProfessor {
 	
 	public void helloProfessor(){
 		int selection = 0;
+		ProfessorInterfaceImpl professor = new ProfessorInterfaceImpl();
 		while(selection < 4){
 		System.out.println("\nHello Professor!\t Welcome to CRS.\n");
 		System.out.println("1.Login\n2.View Courses\n3.Add Grades\n4.Exit");
@@ -13,13 +16,13 @@ public class CRSProfessor {
 		 selection = scan.nextInt();
 			switch(selection){
 			case 1:
-				login();
+				professor.login();
 				break;
 			case 2:
-				viewCourses();
+				professor.viewCourses();
 				break;
 			case 3:
-				addGrades();
+				professor.addGrades();
 				break;
 			case 4:
 				System.out.println("Bye Professor!");
@@ -28,18 +31,7 @@ public class CRSProfessor {
 				System.out.println("Please choose the valid input!");
 				selection = 0;
 				break;
+				}
 			}
 		}
-		}
-	public void login(){
-		System.out.println("Professor Login()\n");
-		}
-
-	public void viewCourses(){
-		System.out.println("View Courses()\n");
-		}
-
-	public void addGrades(){
-		System.out.println("Add Grades()\n");
-		}
-}
+	}

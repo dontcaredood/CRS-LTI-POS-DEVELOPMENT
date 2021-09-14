@@ -2,9 +2,11 @@ package com.lt.business;
 
 public interface ProfessorInterface {
 	
-	public void login();
+	public void login();//Tanu
 
-	public void viewCourses();
+	public void viewCourses(); //Rehan
 
+	public void viewStudent();
+	
 	public void addGrades();
 }
