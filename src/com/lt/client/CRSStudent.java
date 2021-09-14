@@ -6,7 +6,7 @@ public class CRSStudent {
 	public void helloStudent(){
 	int selection = 0;
 	while(selection < 4){
-		System.out.println("Hello Student!\t Welcome to CRS.");
+		System.out.println("\nHello Student!\t Welcome to CRS.\n");
 		System.out.println("1.Login\n2.View Grade\n3.Register Courses\n4.Exit");
 		Scanner scan = new Scanner(System.in);
 		selection = scan.nextInt();
