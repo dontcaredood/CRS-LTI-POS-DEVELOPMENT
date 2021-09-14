@@ -1,6 +1,8 @@
 package com.lt.business;
 
 public interface AdminInterface {
-	public boolean adminLogin();
+	public void login();
+	public void addProfessor();
+	public void approveStudent();
 	
 }
