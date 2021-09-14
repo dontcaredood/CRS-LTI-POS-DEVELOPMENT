@@ -39,7 +39,7 @@ public class CRSStudent {
 		}
 
 	public void registerCourses(){
-		System.out.println("Register Courses\n");
+		System.out.println("Register Courses for student\n");
 		}
 	
 }
