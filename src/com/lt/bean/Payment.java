@@ -11,24 +11,17 @@ public class Payment {
 	private float billAmount;
 	private String paymentType;
 	private String paymentMethod;
-	
-	public final Date getBillDate() {
-		return billDate;
-	}
-	public final void setBillDate(Date billDate) {
-		this.billDate = billDate;
-	}
-	public final String getPaymentType() {
-		return paymentType;
-	}
-	public final void setPaymentType(String paymentType) {
-		this.paymentType = paymentType;
-	}
 	public int getBillNumber() {
 		return billNumber;
 	}
 	public void setBillNumber(int billNumber) {
 		this.billNumber = billNumber;
+	}
+	public Date getBillDate() {
+		return billDate;
+	}
+	public void setBillDate(Date billDate) {
+		this.billDate = billDate;
 	}
 	public String getDescription() {
 		return description;
@@ -48,11 +41,19 @@ public class Payment {
 	public void setBillAmount(float billAmount) {
 		this.billAmount = billAmount;
 	}
+	public String getPaymentType() {
+		return paymentType;
+	}
+	public void setPaymentType(String paymentType) {
+		this.paymentType = paymentType;
+	}
 	public String getPaymentMethod() {
 		return paymentMethod;
 	}
 	public void setPaymentMethod(String paymentMethod) {
 		this.paymentMethod = paymentMethod;
 	}
+	
+
 	
 }

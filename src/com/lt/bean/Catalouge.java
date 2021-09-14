@@ -4,16 +4,17 @@ public class Catalouge {
 	private Course course;
 	private int courseCatalougeId;
 	
-	public final Course getCourse() {
+	public Course getCourse() {
 		return course;
 	}
-	public final void setCourse(Course course) {
+	public void setCourse(Course course) {
 		this.course = course;
 	}
-	public final int getCourseCatalougeId() {
+	public int getCourseCatalougeId() {
 		return courseCatalougeId;
 	}
-	public final void setCourseCatalougeId(int courseCatalougeId) {
+	public void setCourseCatalougeId(int courseCatalougeId) {
 		this.courseCatalougeId = courseCatalougeId;
 	}
-}
+	
+	}
