@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class CRSApplication {
 	public static void main(String[] args){
 		System.out.println("Course Registration System\n");
-		System.out.println("User Selection\n1.Student\n2.Professor\n3.Admin");
+		System.out.println("Select User:\n1.Student\n2.Professor\n3.Admin");
 		Scanner scan = new Scanner(System.in);
 		int roleSelection = scan.nextInt();
 		
