@@ -7,7 +7,7 @@ public class CRSProfessor {
 	public void helloProfessor(){
 		int selection = 0;
 		while(selection < 4){
-		System.out.println("Hello Professor!\t Welcome to CRS.");
+		System.out.println("\nHello Professor!\t Welcome to CRS.\n");
 		System.out.println("1.Login\n2.View Courses\n3.Add Grades\n4.Exit");
 		Scanner scan = new Scanner(System.in);
 		 selection = scan.nextInt();

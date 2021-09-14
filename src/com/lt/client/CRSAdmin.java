@@ -6,7 +6,7 @@ public class CRSAdmin {
 	public void helloAdmin(){
 		int selection = 0;
 		while(selection < 4){
-		System.out.println("Hello Admin!\t Welcome to CRS.");
+		System.out.println("\nHello Admin!\t Welcome to CRS.\n");
 		System.out.println("1.Login\n2.Add Professor\n3.Approve Student\n4.Exit");
 		Scanner scan = new Scanner(System.in);
 		 selection = scan.nextInt();
