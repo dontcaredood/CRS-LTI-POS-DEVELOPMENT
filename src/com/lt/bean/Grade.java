@@ -6,7 +6,7 @@ public class Grade {
 	public String status;
 	public double points;
 	public String std_name;
-	public String stdid;
+	public int stdid;
 	public int getGid() {
 		return gid;
 	}
@@ -31,10 +31,10 @@ public class Grade {
 	public void setStd_name(String std_name) {
 		this.std_name = std_name;
 	}
-	public String getStdid() {
+	public int getStdid() {
 		return stdid;
 	}
-	public void setStdid(String stdid) {
+	public void setStdid(int stdid) {
 		this.stdid = stdid;
 	}
 	

@@ -8,9 +8,9 @@ import com.lt.bean.Grade;
 public class ProfessorImpl implements ProfessorInterface {
 
 	@Override
-	public List<Course> viewCourse() {
+	public void viewCourse() {
 		// TODO Auto-generated method stub
-		return null;
+		
 	}
 
 	@Override
