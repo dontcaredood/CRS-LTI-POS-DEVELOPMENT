@@ -11,6 +11,47 @@ import com.lt.bean.GradeCard;
 import com.lt.bean.Student;
 
 public class StudentInterfaceImpl implements StudentInterface{
+	
+	public void signUp() {
+		
+		//String pass;
+		System.out.println("Student signUp:");
+		System.out.println("----------------------------------------");
+		
+		Scanner sc= new Scanner(System.in);
+		
+		System.out.println("---Welcome----");
+		System.out.println("Enter Student Name");
+		String st=sc.next();
+		
+	//	String stdept=sc.next();
+		System.out.println("Enter StudentDept::" );
+		String stdept=sc.next();
+		
+		System.out.println("Enter Student Password");
+		String stpassword=sc.next();
+	
+		System.out.println("Enter Student Confirm Password");
+		String stconfirmpwd=sc.next();
+		
+				
+		if(stpassword.equals(stconfirmpwd)) {
+			System.out.println(st+" "+"Successfully signed up !!");
+			
+		}
+		else
+		{
+			System.out.println("Not succesfully registered! Mismatch the password and confirm password !!");
+			signUp();
+		}
+		 
+		
+		
+		
+		
+	}
+
+	
 	public void login(){
 		
 			try {

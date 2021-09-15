@@ -17,6 +17,8 @@ public class CRSApplication {
 			switch(roleSelection){
 			case 1:
 				System.out.println("Sign Up");
+				StudentInterfaceImpl student1 = new StudentInterfaceImpl();
+				student1.signUp();
 				break;
 			case 2:
 				System.out.println("1.Student\n2.Professor\n3.Admin\n4.Exit");
