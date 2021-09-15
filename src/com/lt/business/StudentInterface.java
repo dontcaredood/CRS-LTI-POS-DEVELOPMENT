@@ -6,4 +6,8 @@ public interface StudentInterface {
 	public void viewGrade();
 
 	public void registerCourses();
+	
+	public void addCourses();
+	
+	public void dropCourses();
 	}
