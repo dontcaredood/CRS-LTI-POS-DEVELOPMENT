@@ -7,14 +7,11 @@ import com.lt.bean.GradeCard;
 import com.lt.bean.Professor;
 import com.lt.bean.Student;
 import com.lt.bean.User;
+import com.lt.dao.AdminDaoImpl;
 
 public class AdminInterfaceImpl implements AdminInterface{
-	public HashMap<Integer, String> getLoginDetails(){
-		HashMap<Integer, String> prof = new HashMap<Integer, String>();
-		prof.put(101, "pass1");
-		prof.put(102, "pass2");
-		return prof;
-	}
+	
+	AdminDaoImpl adminDaoImpl = new AdminDaoImpl();
 	public void login(){
 		try {
 			Scanner kb= new Scanner(System.in);
@@ -22,7 +19,7 @@ public class AdminInterfaceImpl implements AdminInterface{
 			String pass;
 			System.out.println("Admin Login:");
 			System.out.println("----------------------------------------");
-			HashMap<Integer, String> prof = getLoginDetails();
+			HashMap<Integer, String> prof = adminDaoImpl.getLoginDetails();
 			System.out.println("Enter UserId: ");
 			userId=kb.nextInt();
 			if(prof.containsKey(userId)){
@@ -72,32 +69,23 @@ public class AdminInterfaceImpl implements AdminInterface{
 			}
 		}
 	public void addProfessor() {
-		// TODO Auto-generated method stub
-		Professor p1=new Professor();
-		p1.setUserId(100);
-		p1.setProfessorName("Test1");
-		p1.setProfessorDepartment("Computer Science");
-		p1.setProfessorPassword("test1@123");
+		Professor p1 = new Professor();
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter professor Details");
+		System.out.println("Enter professor Name:");
+		p1.setProfessorName(scan.nextLine());
+		System.out.println("Enter professor Password:");
+		p1.setProfessorPassword(scan.nextLine());
+		System.out.println("Enter professor Department:");
+		p1.setProfessorDepartment(scan.nextLine());
+		boolean isAdded = adminDaoImpl.addProfessorData(p1);
+		if(isAdded){
+			System.out.println("Professor Added Sucessfully");
+		}else{
+			System.out.println("Error Adding Professor");
+		}
 
-		Professor p2=new Professor();
-		p2.setUserId(101);
-		p2.setProfessorName("Test2");
-		p2.setProfessorDepartment("Mathematics");
-		p2.setProfessorPassword("test2@123");
 		
-		Professor p3=new Professor();
-		p1.setUserId(102);
-		p1.setProfessorName("Test3");
-		p1.setProfessorDepartment("Electronics");
-		p1.setProfessorPassword("test3@123");
-		
-		LinkedList<Professor> list=new LinkedList<Professor>();
-		
-		list.add(p1);
-		list.add(p2);
-		list.add(p3);
-		
-		System.out.println("Professor Added Sucessfully");
 	}
 
 	public String approveStudent() {
@@ -125,7 +113,21 @@ public class AdminInterfaceImpl implements AdminInterface{
 
 	public void addCourses(Course course) {
 		// TODO Auto-generated method stub
-		
+		Course courseObj = new Course();	
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter Course Details");
+		System.out.println("Enter Course ID:");
+		courseObj.setCourseId(scan.nextLine());
+		System.out.println("Enter Course Name:");
+		courseObj.setCourseName(scan.nextLine());
+		System.out.println("Enter Course Description:");
+		courseObj.setCourseDescription(scan.nextLine());
+		boolean isCourseAdded = adminDaoImpl.addCourses(courseObj);
+		if(isCourseAdded){
+			System.out.println("Professor Added Sucessfully");
+		}else{
+			System.out.println("Error Adding Professor");
+		}
 	}
 
 	public boolean removeCourse(int id) {
