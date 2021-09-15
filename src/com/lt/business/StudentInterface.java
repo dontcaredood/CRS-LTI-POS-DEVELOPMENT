@@ -1,6 +1,9 @@
 package com.lt.business;
 
 public interface StudentInterface {
+	
+	public void signUp();
+	
 	public void login();
 
 	public void viewGrade();
