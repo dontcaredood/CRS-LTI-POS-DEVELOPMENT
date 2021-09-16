@@ -18,7 +18,8 @@ public class DBUtils {
                 InputStream inputStream = DBUtils.class.getClassLoader().getResourceAsStream("./config.properties");
                 prop.load(inputStream);
                 String driver = prop.getProperty("driver");
-                String url = prop.getProperty("url");
+                
+                String url ="jdbc:mysql://localhost:3306/crs";// prop.getProperty("url");
                 String user = prop.getProperty("user");
                 String password = prop.getProperty("password");
                 Class.forName(driver);

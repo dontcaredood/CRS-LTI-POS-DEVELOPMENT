@@ -1,6 +1,5 @@
 package com.lt.dao;
 
-import java.util.HashMap;
 import java.util.List;
 
 import com.lt.bean.Course;
@@ -11,6 +10,7 @@ public interface ProfessorDao {
 
 	public List<Student> getStudentData();
 	public List<Course> getCourseData();
-	public void getLoginDetails(String username,String password);
+	public void getLoginDetails(int username,String password);
 	public List<Grade> getGradeData();
+	public void addGrade(Grade grade);
 }

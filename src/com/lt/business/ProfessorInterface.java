@@ -6,7 +6,7 @@ public interface ProfessorInterface {
 
 	public void viewCourse();
 	public void addGrade(Grade grade);
-	public void login(String username,String password);
+	public void login(int username,String password);
 	
 	
 }

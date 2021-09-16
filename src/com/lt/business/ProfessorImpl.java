@@ -20,9 +20,11 @@ public class ProfessorImpl implements ProfessorInterface {
 	}
 
 	@Override
-	public void login(String username, String password) {
+	public void login(int username, String password) {
 		// TODO Auto-generated method stub
 	profDao.getLoginDetails(username, password);
 	}
+
+	
 
 }

@@ -3,8 +3,8 @@ package com.lt.bean;
 public class Grade {
 
 	private int gradeId;
-	private boolean gradeStatus;
-	private int gradePoints;
+	private String gradeStatus;
+	private double gradePoints;
 	private String studentName;
 	private int studentId;
 	
@@ -14,17 +14,17 @@ public class Grade {
 	public void setGradeId(int gradeId) {
 		this.gradeId = gradeId;
 	}
-	public boolean getGradeStatus() {
+	public String getGradeStatus() {
 		return gradeStatus;
 	}
-	public void setGradeStatus(boolean gradeStatus) {
+	public void setGradeStatus(String gradeStatus) {
 		this.gradeStatus = gradeStatus;
 	}
 	
-	public int getGradePoints() {
+	public double getGradePoints() {
 		return gradePoints;
 	}
-	public void setGradePoints(int gradePoints) {
+	public void setGradePoints(double gradePoints) {
 		this.gradePoints = gradePoints;
 	}
 	public String getStudentName() {

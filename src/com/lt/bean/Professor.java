@@ -4,9 +4,9 @@ public class Professor extends User{
 
 	private int professorId;
 	private String professorName;
-	private String professorUsername;
 	private String professorPassword;
 	private String professorDepartment;
+	
 	public int getProfessorId() {
 		return professorId;
 	}
@@ -19,12 +19,7 @@ public class Professor extends User{
 	public void setProfessorName(String professorName) {
 		this.professorName = professorName;
 	}
-	public String getProfessorUsername() {
-		return professorUsername;
-	}
-	public void setProfessorUsername(String professorUsername) {
-		this.professorUsername = professorUsername;
-	}
+	
 	public String getProfessorPassword() {
 		return professorPassword;
 	}
