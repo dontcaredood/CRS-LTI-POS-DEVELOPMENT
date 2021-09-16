@@ -3,7 +3,6 @@ package com.lt.bean;
 public class Course {
 
 	private int srno;
-	
 	private String courseId;
 	private String courseName;
 	private String courseDescription;
