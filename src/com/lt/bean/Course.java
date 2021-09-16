@@ -2,21 +2,26 @@ package com.lt.bean;
 
 public class Course {
 
-	private int cid;
-	private String name;
-	
-	public int getCid() {
-		return cid;
+	private int courseId;
+	private String courseName;
+	private int courseCatalogId;
+	public int getCourseId() {
+		return courseId;
 	}
-	public void setCid(int cid) {
-		this.cid = cid;
+	public void setCourseId(int courseId) {
+		this.courseId = courseId;
 	}
-	public String getName() {
-		return name;
+	public String getCourseName() {
+		return courseName;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
 	}
-	
-	
+	public int getCourseCatalogId() {
+		return courseCatalogId;
+	}
+	public void setCourseCatalogId(int courseCatalogId) {
+		this.courseCatalogId = courseCatalogId;
+	}
+		
 }

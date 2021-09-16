@@ -1,18 +1,18 @@
 package com.lt.bean;
 
-public class GradeCard {
+public class GradeCard extends Grade {
 
-	private String grade;
+	private boolean gradeStatus;
 	private String remarks;
-	private int std_id;
-	private String std_name;
-	private String course;
+	private String studentName;
+	private String studentDepartment;
+	private int studentId;
 	
-	public String getGrade() {
-		return grade;
+	public boolean isGradeStatus() {
+		return gradeStatus;
 	}
-	public void setGrade(String grade) {
-		this.grade = grade;
+	public void setGradeStatus(boolean gradeStatus) {
+		this.gradeStatus = gradeStatus;
 	}
 	public String getRemarks() {
 		return remarks;
@@ -20,23 +20,24 @@ public class GradeCard {
 	public void setRemarks(String remarks) {
 		this.remarks = remarks;
 	}
-	public int getStd_id() {
-		return std_id;
+	public String getStudentName() {
+		return studentName;
 	}
-	public void setStd_id(int std_id) {
-		this.std_id = std_id;
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
 	}
-	public String getStd_name() {
-		return std_name;
+	public String getStudentDepartment() {
+		return studentDepartment;
 	}
-	public void setStd_name(String std_name) {
-		this.std_name = std_name;
+	public void setStudentDepartment(String studentDepartment) {
+		this.studentDepartment = studentDepartment;
 	}
-	public String getCourse() {
-		return course;
+	public int getStudentId() {
+		return studentId;
 	}
-	public void setCourse(String course) {
-		this.course = course;
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
 	}
-
+	
+	
 }

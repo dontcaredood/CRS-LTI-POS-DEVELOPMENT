@@ -2,41 +2,44 @@ package com.lt.bean;
 
 public class Grade {
 
-	public int gid;
-	public String status;
-	public double points;
-	public String std_name;
-	public int stdid;
-	public int getGid() {
-		return gid;
+	private int gradeId;
+	private boolean gradeStatus;
+	private int gradePoints;
+	private String studentName;
+	private int studentId;
+	
+	public int getGradeId() {
+		return gradeId;
 	}
-	public void setGid(int gid) {
-		this.gid = gid;
+	public void setGradeId(int gradeId) {
+		this.gradeId = gradeId;
 	}
-	public String getStatus() {
-		return status;
+	public boolean getGradeStatus() {
+		return gradeStatus;
 	}
-	public void setStatus(String status) {
-		this.status = status;
+	public void setGradeStatus(boolean gradeStatus) {
+		this.gradeStatus = gradeStatus;
 	}
-	public double getPoints() {
-		return points;
+	
+	public int getGradePoints() {
+		return gradePoints;
 	}
-	public void setPoints(double points) {
-		this.points = points;
+	public void setGradePoints(int gradePoints) {
+		this.gradePoints = gradePoints;
 	}
-	public String getStd_name() {
-		return std_name;
+	public String getStudentName() {
+		return studentName;
 	}
-	public void setStd_name(String std_name) {
-		this.std_name = std_name;
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
 	}
-	public int getStdid() {
-		return stdid;
+	public int getStudentId() {
+		return studentId;
 	}
-	public void setStdid(int stdid) {
-		this.stdid = stdid;
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
 	}
+	
 	
 	
 }

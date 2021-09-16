@@ -4,31 +4,24 @@ import java.util.Date;
 
 public class Payment {
 
-	private int bill_no;
-	private Date bill_date;
-	private double amount;
+	private int billNumber;
+	private Date billDate;
 	private String description;
-	private String paymentStatus;
-	
-	private String paymentMode; //Either Online or Offline
-	private String cardType; //Either Credit Card or Debit card
-	public int getBill_no() {
-		return bill_no;
+	private boolean paymentStatus;
+	private float billAmount;
+	private String paymentType;
+	private String paymentMethod;
+	public int getBillNumber() {
+		return billNumber;
 	}
-	public void setBill_no(int bill_no) {
-		this.bill_no = bill_no;
+	public void setBillNumber(int billNumber) {
+		this.billNumber = billNumber;
 	}
-	public Date getBill_date() {
-		return bill_date;
+	public Date getBillDate() {
+		return billDate;
 	}
-	public void setBill_date(Date bill_date) {
-		this.bill_date = bill_date;
-	}
-	public double getAmount() {
-		return amount;
-	}
-	public void setAmount(double amount) {
-		this.amount = amount;
+	public void setBillDate(Date billDate) {
+		this.billDate = billDate;
 	}
 	public String getDescription() {
 		return description;
@@ -36,27 +29,30 @@ public class Payment {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getPaymentStatus() {
+	public boolean isPaymentStatus() {
 		return paymentStatus;
 	}
-	public void setPaymentStatus(String paymentStatus) {
+	public void setPaymentStatus(boolean paymentStatus) {
 		this.paymentStatus = paymentStatus;
 	}
-	public String getPaymentMode() {
-		return paymentMode;
+	public float getBillAmount() {
+		return billAmount;
 	}
-	public void setPaymentMode(String paymentMode) {
-		this.paymentMode = paymentMode;
+	public void setBillAmount(float billAmount) {
+		this.billAmount = billAmount;
 	}
-	public String getCardType() {
-		return cardType;
+	public String getPaymentType() {
+		return paymentType;
 	}
-	public void setCardType(String cardType) {
-		this.cardType = cardType;
+	public void setPaymentType(String paymentType) {
+		this.paymentType = paymentType;
 	}
-	
-	
-	
+	public String getPaymentMethod() {
+		return paymentMethod;
+	}
+	public void setPaymentMethod(String paymentMethod) {
+		this.paymentMethod = paymentMethod;
+	}
 	
 	
 }

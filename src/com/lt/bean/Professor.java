@@ -1,41 +1,44 @@
 package com.lt.bean;
 
-public class Professor {
+public class Professor extends User{
 
-	private int pid;
-	private String name;
-	private String department;
-	private String username;
-	private String password;
-	public int getPid() {
-		return pid;
+	private int professorId;
+	private String professorName;
+	private String professorUsername;
+	private String professorPassword;
+	private String professorDepartment;
+	public int getProfessorId() {
+		return professorId;
 	}
-	public void setPid(int pid) {
-		this.pid = pid;
+	public void setProfessorId(int professorId) {
+		this.professorId = professorId;
 	}
-	public String getName() {
-		return name;
+	public String getProfessorName() {
+		return professorName;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setProfessorName(String professorName) {
+		this.professorName = professorName;
 	}
-	public String getDepartment() {
-		return department;
+	public String getProfessorUsername() {
+		return professorUsername;
 	}
-	public void setDepartment(String department) {
-		this.department = department;
+	public void setProfessorUsername(String professorUsername) {
+		this.professorUsername = professorUsername;
 	}
-	public String getUsername() {
-		return username;
+	public String getProfessorPassword() {
+		return professorPassword;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setProfessorPassword(String professorPassword) {
+		this.professorPassword = professorPassword;
 	}
-	public String getPassword() {
-		return password;
+	public String getProfessorDepartment() {
+		return professorDepartment;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setProfessorDepartment(String professorDepartment) {
+		this.professorDepartment = professorDepartment;
 	}
-
+	
+	
+	
+	
 }

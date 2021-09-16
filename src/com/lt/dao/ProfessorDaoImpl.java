@@ -5,7 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
@@ -35,8 +34,8 @@ public class ProfessorDaoImpl implements ProfessorDao {
 
 			while (rs.next()) {
 				Student student = new Student();
-				student.setId(rs.getInt(1));
-				student.setName(rs.getString(2));
+				student.setStudentId(rs.getInt(1));
+				student.setStudentName(rs.getString(2));
 				student.setDepartment(rs.getString(3));
 				student.setUsername(rs.getString(4));
 				student.setPassword(rs.getString(5));
@@ -69,8 +68,8 @@ public class ProfessorDaoImpl implements ProfessorDao {
 
 			while (rs.next()) {
 				Course course = new Course();
-				course.setCid(rs.getInt(1));
-				course.setName(rs.getString(2));
+				course.setCourseId(rs.getInt(1));
+				course.setCourseName(rs.getString(2));
 				list.add(course);
 			}
 
@@ -133,11 +132,11 @@ public class ProfessorDaoImpl implements ProfessorDao {
 
 			while (rs.next()) {
 				Grade grade = new Grade();
-				grade.setGid(rs.getInt(1));
-				grade.setStdid(rs.getInt(2));
-				grade.setStd_name(rs.getString(3));
-				grade.setPoints(rs.getDouble(4));
-				grade.setStatus(rs.getString(5));
+				grade.setGradeId(rs.getInt(1));
+				grade.setStudentId(rs.getInt(2));
+				grade.setStudentName(rs.getString(3));
+				grade.setGradePoints(rs.getInt(4));
+				grade.setGradeStatus(rs.getBoolean(5));
 				list.add(grade);
 			}
 
@@ -155,19 +154,19 @@ public class ProfessorDaoImpl implements ProfessorDao {
 		List<Student> list = profDao.getStudentData();
 
 		for (Student st : list) {
-			System.out.println(st.getId() + "\t\t  " + st.getName() + "\t\t          " + st.getDepartment()
+			System.out.println(st.getStudentId() + "\t\t  " + st.getStudentName() + "\t\t          " + st.getDepartment()
 					+ "\t\t           " + st.getUsername() + "\t\t            " + st.getPassword());
 		}
 
 		List<Course> course = profDao.getCourseData();
 		for (Course c : course) {
-			System.out.println(c.getCid() + "\t\t" + c.getName());
+			System.out.println(c.getCourseId() + "\t\t" + c.getCourseName());
 		}
 
 		List<Grade> grade = profDao.getGradeData();
 		for (Grade g : grade) {
-			System.out.println(g.getGid() + "\t\t  " + g.getStdid() + "\t\t    " + g.getStd_name() + "\t\t    "
-					+ g.getPoints() + "\t\t   " + g.getStatus());
+			System.out.println(g.getGradeId() + "\t\t  " + g.getStudentId() + "\t\t    " + g.getStudentName() + "\t\t    "
+					+ g.getGradePoints() + "\t\t   " + g.getGradeStatus());
 		}
 
 		Scanner sc = new Scanner(System.in);
@@ -175,7 +174,6 @@ public class ProfessorDaoImpl implements ProfessorDao {
 		String username = sc.next();
 		System.out.println("Enter Password: ");
 		String password = sc.next();
-
 		profDao.getLoginDetails(username, password);
 
 	}

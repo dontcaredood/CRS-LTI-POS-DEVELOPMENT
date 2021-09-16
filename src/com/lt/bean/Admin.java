@@ -2,33 +2,26 @@ package com.lt.bean;
 
 public class Admin {
 
-	private int admin_id;
-	private String name;
-	private String username;
-	private String password;
-	public int getAdmin_id() {
-		return admin_id;
+	private int adminId;
+	private String adminName;
+	private String adminPassword;
+	public int getAdminId() {
+		return adminId;
 	}
-	public void setAdmin_id(int admin_id) {
-		this.admin_id = admin_id;
+	public void setAdminId(int adminId) {
+		this.adminId = adminId;
 	}
-	public String getName() {
-		return name;
+	public String getAdminName() {
+		return adminName;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setAdminName(String adminName) {
+		this.adminName = adminName;
 	}
-	public String getUsername() {
-		return username;
+	public String getAdminPassword() {
+		return adminPassword;
 	}
-	public void setUsername(String username) {
-		this.username = username;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setAdminPassword(String adminPassword) {
+		this.adminPassword = adminPassword;
 	}
 	
 	
