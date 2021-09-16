@@ -11,20 +11,22 @@ import java.util.Scanner;
 import com.lt.bean.Course;
 import com.lt.bean.Grade;
 import com.lt.bean.Student;
+import com.lt.contants.Constants;
 import com.lt.utils.DBUtils;
 
 public class ProfessorDaoImpl implements ProfessorDao {
 
-	@Override
+	
 	public List<Student> getStudentData() {
 		// TODO Auto-generated method stub
 		Connection con = null;
 
 		List<Student> list = new ArrayList<Student>();
 
-		String sql = "select * from Student";
+		String sql = Constants.PROFESSORgetStudentData;
 		try {
 			con = DBUtils.getConnection();
+			
 			PreparedStatement ps = con.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
 
@@ -44,6 +46,7 @@ public class ProfessorDaoImpl implements ProfessorDao {
 
 		} catch (SQLException e) {
 			// TODO: handle exception
+			System.out.println("Professor : Error In getStudentData");
 		}
 
 		return list;
@@ -57,7 +60,7 @@ public class ProfessorDaoImpl implements ProfessorDao {
 
 		List<Course> list = new ArrayList<Course>();
 
-		String sql = "select * from Course";
+		String sql = Constants.PROFESSORgetCourseData;
 		try {
 			con = DBUtils.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -75,16 +78,17 @@ public class ProfessorDaoImpl implements ProfessorDao {
 
 		} catch (SQLException e) {
 			// TODO: handle exception
+			System.out.println("Professor : Error In getCourseData");
 		}
 
 		return list;
 	}
 
-	@Override
+
 	public void getLoginDetails(String username, String password) {
 		// TODO Auto-generated method stub
 		Connection con = null;
-		String sql = "select username,password from users where username=? and password=?";
+		String sql = Constants.PROFESSORgetLoginDetails;
 		try {
 			con = DBUtils.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -102,6 +106,7 @@ public class ProfessorDaoImpl implements ProfessorDao {
 			}
 		} catch (SQLException e) {
 			// TODO: handle exception
+			System.out.println("Professor : Error In getLoginDetails");
 		}
 		finally {
 			try {
@@ -114,14 +119,14 @@ public class ProfessorDaoImpl implements ProfessorDao {
 
 	}
 
-	@Override
+	
 	public List<Grade> getGradeData() {
 		// TODO Auto-generated method stub
 		Connection con = null;
 
 		List<Grade> list = new ArrayList<Grade>();
 
-		String sql = "select g.gid,s.sid ,s.sname ,g.points,g.status from Grade as g inner join Student as s on g.stdid=s.sid";
+		String sql = Constants.PROFESSORgetGradeData;
 		try {
 			con = DBUtils.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -142,6 +147,7 @@ public class ProfessorDaoImpl implements ProfessorDao {
 
 		} catch (SQLException e) {
 			// TODO: handle exception
+			System.out.println("Professor : Error In getGradeData");
 		}
 
 		return list;
