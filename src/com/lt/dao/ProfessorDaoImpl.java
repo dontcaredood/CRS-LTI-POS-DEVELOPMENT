@@ -1,179 +1,136 @@
-//package com.lt.dao;
-//
-//import java.sql.Connection;
-//import java.sql.PreparedStatement;
-//import java.sql.ResultSet;
-//import java.sql.SQLException;
-//import java.util.ArrayList;
-//import java.util.HashMap;
-//import java.util.List;
-//import java.util.Scanner;
-//
-//import com.lt.bean.Course;
-//import com.lt.bean.Grade;
-//import com.lt.bean.Student;
-//import com.lt.utils.DBUtils;
-//
-//public class ProfessorDaoImpl implements ProfessorDao {
-//
-//	public List<Student> getStudentData() {
-//		// TODO Auto-generated method stub
-//		Connection con = null;
-//
-//		List<Student> list = new ArrayList<Student>();
-//
-//		String sql = "select * from Student";
-//		try {
-//			con = DBUtils.getConnection();
-//			PreparedStatement ps = con.prepareStatement(sql);
-//			ResultSet rs = ps.executeQuery();
-//
-//			System.out.println("Show Student Data Below");
-//			System.out.println(
-//					"\nStudennt Id   \t Student Name   \t Student Department   \t   Student Username    \t Student Password");
-//
-//			while (rs.next()) {
-//				Student student = new Student();
-//				student.setId(rs.getInt(1));
-//				student.setName(rs.getString(2));
-//				student.setDepartment(rs.getString(3));
-//				student.setUsername(rs.getString(4));
-//				student.setPassword(rs.getString(5));
-//				list.add(student);
-//			}
-//
-//		} catch (SQLException e) {
-//			// TODO: handle exception
-//		}
-//
-//		return list;
-//	}
-//
-//	public List<Course> getCourseData() {
-//		// TODO Auto-generated method stub
-//
-//		Connection con = null;
-//
-//		List<Course> list = new ArrayList<Course>();
-//
-//		String sql = "select * from Course";
-//		try {
-//			con = DBUtils.getConnection();
-//			PreparedStatement ps = con.prepareStatement(sql);
-//			ResultSet rs = ps.executeQuery();
-//
-//			System.out.println("Show Courses Data Below");
-//			System.out.println("\nCourse Id   \t Course Name");
-//
-//			while (rs.next()) {
-//				Course course = new Course();
-//				course.setCid(rs.getInt(1));
-//				course.setName(rs.getString(2));
-//				list.add(course);
-//			}
-//
-//		} catch (SQLException e) {
-//			// TODO: handle exception
-//		}
-//
-//		return list;
-//	}
-//
-//	public void getLoginDetails(String username, String password) {
-//		// TODO Auto-generated method stub
-//		Connection con = null;
-//		String sql = "select username,password from users where username=? and password=?";
-//		try {
-//			con = DBUtils.getConnection();
-//			PreparedStatement ps = con.prepareStatement(sql);
-//			ps.setString(1, username);
-//			ps.setString(2, password);
-//			ResultSet rs = ps.executeQuery();
-//			if (rs.next()) {
-//
-//				if (username.equals(rs.getString(1)) && password.equals(rs.getString(2))) {
-//					System.out.println("You have Login Successfully");
-//				}
-//
-//			} else {
-//				System.out.println("Login Failed Try Again!!!");
-//			}
-//		} catch (SQLException e) {
-//			// TODO: handle exception
-//		}
-//		finally {
-//			try {
-//				con.close();
-//			} catch (SQLException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-//		}
-//
-//	}
-//
-//	public List<Grade> getGradeData() {
-//		// TODO Auto-generated method stub
-//		Connection con = null;
-//
-//		List<Grade> list = new ArrayList<Grade>();
-//
-//		String sql = "select g.gid,s.sid ,s.sname ,g.points,g.status from Grade as g inner join Student as s on g.stdid=s.sid";
-//		try {
-//			con = DBUtils.getConnection();
-//			PreparedStatement ps = con.prepareStatement(sql);
-//			ResultSet rs = ps.executeQuery();
-//
-//			System.out.println("Show Grade Data Below");
-//			System.out.println("\nGrade_Id   \t Student Id   \t Student Name   \t Grade Points   \t   Grade Status");
-//
-//			while (rs.next()) {
-//				Grade grade = new Grade();
-//				grade.setGid(rs.getInt(1));
-//				grade.setStdid(rs.getInt(2));
-//				grade.setStd_name(rs.getString(3));
-//				grade.setPoints(rs.getDouble(4));
-//				grade.setStatus(rs.getString(5));
-//				list.add(grade);
-//			}
-//
-//		} catch (SQLException e) {
-//			// TODO: handle exception
-//		}
-//
-//		return list;
-//	}
-//
-//	public static void main(String[] args) {
-//
-//		ProfessorDaoImpl profDao = new ProfessorDaoImpl();
-//
-//		List<Student> list = profDao.getStudentData();
-//
-//		for (Student st : list) {
-//			System.out.println(st.getId() + "\t\t  " + st.getName() + "\t\t          " + st.getDepartment()
-//					+ "\t\t           " + st.getUsername() + "\t\t            " + st.getPassword());
-//		}
-//
-//		List<Course> course = profDao.getCourseData();
-//		for (Course c : course) {
-//			System.out.println(c.getCid() + "\t\t" + c.getName());
-//		}
-//
-//		List<Grade> grade = profDao.getGradeData();
-//		for (Grade g : grade) {
-//			System.out.println(g.getGid() + "\t\t  " + g.getStdid() + "\t\t    " + g.getStd_name() + "\t\t    "
-//					+ g.getPoints() + "\t\t   " + g.getStatus());
-//		}
-//
-//		Scanner sc = new Scanner(System.in);
-//		System.out.println("Enter Username: ");
-//		String username = sc.next();
-//		System.out.println("Enter Password: ");
-//		String password = sc.next();
-//
-//		profDao.getLoginDetails(username, password);
-//
-//	}
-//
-//}
+package com.lt.dao;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Scanner;
+import com.lt.bean.Course;
+import com.lt.bean.Grade;
+import com.lt.bean.Student;
+import com.lt.constants.Constants;
+import com.lt.utils.DBUtils;
+
+public class ProfessorDaoImpl implements ProfessorDao {
+
+public HashMap<Integer, String> getLoginDetails() {
+		
+		Connection con = null;
+		String sql = Constants.ProfessorGetLoginDetails;
+		HashMap<Integer, String> adminDetails = new HashMap<Integer, String>();
+		try {
+			con = DBUtils.getConnection();
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				adminDetails.put(rs.getInt(1),rs.getString(2));
+			}
+
+		} catch (SQLException e) {
+			System.err.println("Professor : Login Error!");
+		}
+
+		return adminDetails;
+	}
+
+	public List<Student> getStudentData() {
+		Connection con = null;
+		List<Student> list = new ArrayList<Student>();
+		String sql = Constants.ProfessorGetStudentData;
+		try {
+			con = DBUtils.getConnection();
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				Student student = new Student();
+				student.setStudentId(rs.getInt(1));
+				student.setStudentName(rs.getString(2));
+				student.setDepartment(rs.getString(3));
+				student.setPassword(rs.getString(5));
+				list.add(student);
+			}
+		} catch (SQLException e) {
+			// TODO: handle exception
+			System.out.println("Professor : Error In getStudentData");
+		}
+
+		return list;
+	}
+	
+	/*public List<Course> getCourseData() {
+		Connection con = null;
+		List<Course> list = new ArrayList<Course>();
+		String sql = Constants.PROFESSORgetCourseData;
+		try {
+			con = DBUtils.getConnection();
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			System.out.println("Show Courses Data Below");
+			System.out.println("\nCourse Id   \t Course Name");
+			while (rs.next()) {
+				Course course = new Course();
+				course.setCourseId(rs.getString(1));
+				course.setCourseName(rs.getString(2));
+				course.setCourseDescription(rs.getString(3));
+				list.add(course);
+			}
+
+		} catch (SQLException e) {
+			// TODO: handle exception
+			System.out.println("Professor : Error In getCourseData");
+		}
+
+		return list;
+	}*/
+
+	public List<Grade> getGradeData() {
+		// TODO Auto-generated method stub
+		Connection con = null;
+		List<Grade> list = new ArrayList<Grade>();
+		String sql = Constants.ProfessorGetGradeData;
+		try {
+			con = DBUtils.getConnection();
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			System.out.println("Show Grade Data Below");
+			System.out.println("\nGrade_Id   \t Student Id   \t Student Name   \t Grade Points   \t   Grade Status");
+			while (rs.next()) {
+				Grade grade = new Grade();
+				grade.setGradeId(rs.getInt(1));
+				grade.setStudentId(rs.getInt(2));
+				grade.setStudentName(rs.getString(3));
+				grade.setGradePoints(rs.getInt(4));
+				list.add(grade);
+			}
+
+		} catch (SQLException e) {
+			// TODO: handle exception
+			System.out.println("Professor : Error In getGradeData");
+		}
+
+		return list;
+	}
+
+	public boolean addGrade(Grade grade) {
+			Connection con = null;
+			String sql = Constants.ProfessorAddGrade;
+			boolean flag = false;
+			try {
+				con = DBUtils.getConnection();
+				PreparedStatement ps = con.prepareStatement(sql);
+				ps.setString(1, grade.getGradeStatus());
+				ps.setDouble(2, grade.getGradePoints());
+				ps.setInt(3, grade.getStudentId());
+				int rs = ps.executeUpdate();
+				if(rs>0) {flag = true;}
+				System.out.println("Student Grade Added Successfully!");
+
+			} catch (SQLException e) {
+				System.out.println("Professor : Error In AddGrade");
+				e.printStackTrace();
+			}
+			return flag;
+	}
+}

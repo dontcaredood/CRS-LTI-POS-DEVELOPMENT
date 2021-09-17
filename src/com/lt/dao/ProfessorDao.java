@@ -9,22 +9,21 @@ import com.lt.bean.Student;
 
 public interface ProfessorDao {
 	/*
-	 * getStudentData is to fetch student details from the database table
-	*/
+	 * This method will return the Student Data login details
+	 */
 	public List<Student> getStudentData();
 	/*
-	 * getCourseData is to fetch student details from the database table
-	*/
-	public List<Course> getCourseData();
+	 * This method will return the Admin login details
+	 */
+	//public List<Course> getCourseData();
 	/*
-	  * getLoginDetails is to fetch student details from the database table
-	  * @param username
-	  * @param password
-	  * 
-	*/
-	public void getLoginDetails(String username,String password);
-	/* 
-	 * getGradeData is to fetch student details from the database table
-	*/
+	 * This method will return the Admin login details
+	 */
+	public HashMap<Integer, String> getLoginDetails();
+	/*
+	 * This method will return the Admin login details
+	 */
 	public List<Grade> getGradeData();
-}
+	
+	public boolean addGrade(Grade grade);
+} 

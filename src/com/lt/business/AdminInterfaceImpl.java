@@ -7,6 +7,7 @@ import com.lt.bean.GradeCard;
 import com.lt.bean.Professor;
 import com.lt.bean.Student;
 import com.lt.bean.User;
+import com.lt.client.CRSApplication;
 import com.lt.dao.AdminDaoImpl;
 
 public class AdminInterfaceImpl implements AdminInterface{
@@ -18,12 +19,11 @@ public class AdminInterfaceImpl implements AdminInterface{
 			int userId;
 			String pass;
 			System.out.println("Admin Login:");
-			System.out.println("----------------------------------------");
 			HashMap<Integer, String> prof = adminDaoImpl.getLoginDetails();
-			System.out.println("Enter UserId: ");
+			System.out.println("Please enter User Id: ");
 			userId=kb.nextInt();
 			if(prof.containsKey(userId)){
-				System.out.println("Enter Password: ");
+				System.out.println("Please enter Password: ");
 				pass=kb.next();
 				if(pass.equalsIgnoreCase(prof.get(userId))){
 					showMenu();
@@ -46,7 +46,8 @@ public class AdminInterfaceImpl implements AdminInterface{
 	public void showMenu(){
 		int i = 0;
 		while(i<4){
-			System.out.println("\nWelcome Admin!\n1.Add Professor\n2.Approve Student\n3.Generate GradeSheet\n4.Logout");
+			System.out.println("\nWelcome Admin!\n1.Add Professor\n2.Approve Student\n3.Generate GradeSheet\n4.Add Courses\n"
+					+ "5.Remove Courses\n6.Logout");
 			Scanner scan = new Scanner(System.in);
 			int input = scan.nextInt();
 			switch(input){
@@ -60,7 +61,14 @@ public class AdminInterfaceImpl implements AdminInterface{
 				generateReport();
 				break;
 			case 4:
-				System.out.println("Logged out successfully.");
+				addCourses();
+				break;
+			case 5:
+				removeCourse();
+				break;
+			case 6:
+				System.out.println("Logged out successfully.\n");
+				new CRSApplication().main(null);
 				i=5;
 				break;
 			default:
@@ -69,9 +77,10 @@ public class AdminInterfaceImpl implements AdminInterface{
 			}
 		}
 	public void addProfessor() {
+		showProfessors();
 		Professor p1 = new Professor();
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Enter professor Details");
+		System.out.println("Enter professor Details:");
 		System.out.println("Enter professor Name:");
 		p1.setProfessorName(scan.nextLine());
 		System.out.println("Enter professor Password:");
@@ -84,35 +93,61 @@ public class AdminInterfaceImpl implements AdminInterface{
 		}else{
 			System.out.println("Error Adding Professor");
 		}
-
-		
+		showProfessors();
 	}
 
-	public String approveStudent() {
-		// TODO Auto-generated method stub
-		
-		Student s1=new Student();
-		s1.setUserId(100);
-		s1.setStudentName("Rehan");
-		s1.setDepartment("Computer Science");
-		s1.setPassword("rehan123");
-		
-		String status="";
-		
-		System.out.println("Student Approval Status");
-		if(s1.getStudentName()!=""&&s1.getStudentName()!=null&&s1.getDepartment()!=""&&s1.getDepartment()!=null&&s1.getPassword()!="")
-		{
-			status="Approved";
+	public void approveStudent() {
+		List<Student> studentList = adminDaoImpl.getStudentDetails();
+		Scanner scan = new Scanner(System.in);
+		boolean flag = false;
+		if(studentList.isEmpty()){
+			System.out.println("No Pending approvals!!");
 		}else{
-			status="Not Approved";		
+			int listCount = studentList.size();
+			while(listCount > 0 ){
+				System.out.println("__________________________________________________________________");
+				System.out.println("Student Details:\nStudent ID :\t\tStudent Name\t\tStudent Department");
+				for(Student s : studentList){
+					System.out.println(s.getStudentId()+"\t\t\t"+s.getStudentName()+"\t\t\t"+s.getDepartment());
+				}
+				System.out.println("__________________________________________________________________");
+				System.out.println("Enter the Student Id to approve");
+				int studentId = scan.nextInt();
+				System.out.println("Approve or Deny the student? \nEnter 1 to approve\nEnter 2 to deny:");
+				int choice = scan.nextInt();
+				switch(choice){
+				case 1:
+					flag = adminDaoImpl.approveStudent(studentId,"Y");
+					if(flag){
+						System.out.println(studentId+" has been approved successfully!");
+						listCount--;
+						studentList.remove(0);
+					}
+					break;
+				case 2:
+					adminDaoImpl.approveStudent(studentId,"R");
+					if(flag){
+						System.out.println(studentId+" has been rejected sucessfully!");
+						listCount--;
+						studentList.remove(0);
+					}
+					
+				}
+				
+				
+			}
+			
 		}
 		
 		
-		return status;
+		
+		
+		
 	}
 
-	public void addCourses(Course course) {
-		// TODO Auto-generated method stub
+	public void addCourses() {
+		showCourses();
+		System.out.println("Add Courses:");
 		Course courseObj = new Course();	
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter Course Details");
@@ -124,37 +159,32 @@ public class AdminInterfaceImpl implements AdminInterface{
 		courseObj.setCourseDescription(scan.nextLine());
 		boolean isCourseAdded = adminDaoImpl.addCourses(courseObj);
 		if(isCourseAdded){
-			System.out.println("Professor Added Sucessfully");
+			System.out.println(courseObj.getCourseName()+" Course Added Sucessfully\n");
 		}else{
-			System.out.println("Error Adding Professor");
+			System.out.println("Error Adding Course");
 		}
+		showCourses();
 	}
 
-	public boolean removeCourse(int id) {
-		// TODO Auto-generated method stub
-		return false;
+	public void removeCourse() {
+		showCourses();
+		System.out.println("Remove Course:");
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter Course ID");
+		String courseId = scan.nextLine();
+		boolean isCourseAdded = adminDaoImpl.removeCourses(courseId);
+		if(isCourseAdded){
+			System.out.println(courseId+" Course Removed Sucessfully");
+		}else{
+			System.out.println("Error removing course");
+		}
+		showCourses();
 	}
 
 	public void generateReport() {
 		// TODO Auto-generated method stub
-		
-		GradeCard gc1=new GradeCard();
-		gc1.setGradePoints(7);
-		gc1.setStudentDepartment("Computer Science");
-		gc1.setStudentId(100);
-		gc1.setStudentName("Rehan");
-		gc1.setRemarks("Pass");
-		
-		GradeCard gc2=new GradeCard();
-		gc2.setGradePoints(8);
-		gc2.setStudentDepartment("IT Science");
-		gc2.setStudentId(101);
-		gc2.setStudentName("Tushar");
-		gc2.setRemarks("Fail");
-		
-		List<GradeCard> list = new ArrayList<GradeCard>();
-		list.add(gc1);
-		list.add(gc2);
+		System.out.println("Generate Report:");
+		List<GradeCard> list = adminDaoImpl.getGradeCardDetails();
 		for(GradeCard grade : list){
 			System.out.println("Student Id: "+grade.getStudentId());
 			System.out.println("Student Name: "+grade.getStudentName());
@@ -163,20 +193,29 @@ public class AdminInterfaceImpl implements AdminInterface{
 			System.out.println("Remarks: "+grade.getRemarks());
 			System.out.println("---------------------------------------");
 		}
-//		Iterator itr = list.iterator();
-//		System.out.println("----------------Grade Card Report Generated-------------------");
-//		while(itr.hasNext())
-//		{
-//			GradeCard grade=(GradeCard)itr.next();
-//			System.out.println("Student Id: "+grade.getStudentId());
-//			System.out.println("Student Name: "+grade.getStudentName());
-//			System.out.println("Department :"+grade.getStudentDepartment());
-//			System.out.println("Grade :"+grade.getGradePoints());
-//			System.out.println("Remarks: "+grade.getRemarks());
-//			System.out.println("---------------------------------------");
-//			
-//		}
 	}
 	
-	
+	public void showCourses(){
+		ArrayList<Course> courseList = adminDaoImpl.showCourses();
+		if(courseList.isEmpty()){System.out.println("No Courses Availabe!");}else{
+			System.out.println("__________________________________________________________________");
+			System.out.println("Courses:\nCourse ID :\t\tCourse Name\t\tCourse Description");
+			for(Course c : courseList){
+				System.out.println(c.getCourseId()+"\t\t\t"+c.getCourseName()+"\t\t\t"+c.getCourseDescription());
+			}
+			System.out.println("__________________________________________________________________");
+
+		}
+	}
+	public void showProfessors(){
+		ArrayList<Professor> professorList = adminDaoImpl.showProfessors();
+		if(professorList.isEmpty()){System.out.println("No Courses Availabe!");}else{
+			System.out.println("Professor List:\nProfessor ID :\t\t\tProfessor Name\t\t\tProfessor Department\t\t2\tPassword");
+			for(Professor c : professorList){
+				System.out.println(c.getProfessorId()+"\t\t\t\t"+c.getProfessorName()+"\t\t\t\t"+c.getProfessorDepartment()+"\t\t\t\t"+c.getProfessorPassword());
+			}
+			System.out.println("__________________________________________________________________");
+
+		}
+	}
 }

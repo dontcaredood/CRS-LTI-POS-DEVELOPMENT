@@ -29,14 +29,92 @@ public class AdminDaoImpl implements AdminDao{
 	}
 
 	public List<Student> getStudentDetails() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+		Connection con = null;
+		String sql = Constants.AdminGetStudentDetails;
+		List<Student> studentDetails = new ArrayList<Student>();
+		try {
+			con = DBUtils.getConnection();
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				Student s = new Student();
+				s.setStudentId(rs.getInt(1));
+				s.setStudentName(rs.getString(2));
+				s.setDepartment(rs.getString(3));
+				studentDetails.add(s);
+			}
 
+		} catch (SQLException e) {
+			System.err.println("Admin : Generate Grade Error!");
+		}
+		return studentDetails;
+	}
+	
+	public ArrayList<Course> showCourses(){
+		Connection con = null;
+		String sql = Constants.AdminShowCourses;
+		ArrayList<Course> courseDetails = new ArrayList<Course>();
+		try {
+			con = DBUtils.getConnection();
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				Course g = new Course();
+				g.setCourseId(rs.getString(2));
+				g.setCourseName(rs.getString(3));
+				g.setCourseDescription(rs.getString(4));
+				courseDetails.add(g);
+			}
+
+		} catch (SQLException e) {
+			System.err.println("Admin : Show Courses Error!");
+		}
+		return courseDetails;	
+	}
+	
+	public ArrayList<Professor> showProfessors(){
+		Connection con = null;
+		String sql = Constants.AdminShowProfessors;
+		ArrayList<Professor> professorDetails = new ArrayList<Professor>();
+		try {
+			con = DBUtils.getConnection();
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				Professor prof = new Professor();
+				prof.setProfessorId(rs.getInt(1));
+				prof.setProfessorName(rs.getString(2));
+				prof.setProfessorPassword(rs.getString(3));
+				prof.setProfessorDepartment(rs.getString(4));
+				professorDetails.add(prof);
+			}
+
+		} catch (SQLException e) {
+			System.err.println("Admin : Show Professors Error!");
+		}
+		return professorDetails;	
+	}
+	public boolean approveStudent(int studentId, String result){
+		Connection con = null;
+		PreparedStatement ps = null;
+		String sql = Constants.AdminApproveStudent;
+		boolean flag = false;
+		try {
+			con = DBUtils.getConnection();
+			ps = con.prepareStatement(sql);
+	        ps.setString(1,result);
+	        ps.setInt(2,studentId);
+			int rs = ps.executeUpdate();
+			if(rs>0) {flag = true;}
+		} catch (SQLException e) {
+			System.err.println("Admin : Add Professor Error!");
+			e.printStackTrace();
+ 		}
+		return true;
+	}
 	public boolean addProfessorData(Professor professsor) {
 		Connection con = null;
 		PreparedStatement ps = null;
-		List<Student> list = new ArrayList<Student>();
 		String sql = Constants.AdminAddProfessor;
 		boolean flag = false;
 		try {
@@ -71,8 +149,7 @@ public class AdminDaoImpl implements AdminDao{
 	public boolean addCourses(Course course) {
 		Connection con = null;
 		PreparedStatement ps = null;
-		List<Student> list = new ArrayList<Student>();
-		String sql = Constants.AdminAddProfessor;
+		String sql = Constants.AdminAddCourse;
 		boolean flag = false;
 		try {
 			con = DBUtils.getConnection();
@@ -83,20 +160,53 @@ public class AdminDaoImpl implements AdminDao{
 			int rs = ps.executeUpdate();
 			if(rs>0) {flag = true;}
 		} catch (SQLException e) {
-			System.err.println("Admin : Add Professor Error!");
+			System.err.println("Admin : Add Courses Error!");
 			e.printStackTrace();
  		}
 		return flag;
 	}
 
-	public boolean removeCourses(Course course) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean removeCourses(String courseId) {
+		Connection con =null;
+		PreparedStatement ps = null;
+		String sql = Constants.AdminRemoveCourse;
+		boolean flag = false;
+		try {
+			con = DBUtils.getConnection();
+			ps = con.prepareStatement(sql);
+			ps.setString(1, courseId);
+			int rs = ps.executeUpdate();
+			if(rs>0) {flag = true;}
+		} catch (Exception e) {
+			System.err.println("Admin : Remove Course Error!");
+			e.printStackTrace();
+		}
+		return flag;
 	}
 
 	public List<GradeCard> getGradeCardDetails() {
-		// TODO Auto-generated method stub
-		return null;
+		Connection con = null;
+		String sql = Constants.AdminGetGradeCard;
+		List<GradeCard> gradeDetails = new ArrayList<GradeCard>();
+		try {
+			con = DBUtils.getConnection();
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				GradeCard g = new GradeCard();
+				g.setStudentId(rs.getInt(2));
+				g.setStudentName(rs.getString(3));
+				g.setStudentDepartment(rs.getString(4));
+				g.setGradePoints(rs.getFloat(5));
+				g.setRemarks(rs.getString(6));
+				gradeDetails.add(g);
+			}
+
+		} catch (SQLException e) {
+			System.err.println("Admin : Generate Grade Error!");
+		}
+
+		return gradeDetails;
 	}
 
 }

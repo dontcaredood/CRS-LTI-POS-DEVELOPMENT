@@ -6,9 +6,9 @@ public interface AdminInterface {
 
 	public void login();
 	public void addProfessor();
-	public String approveStudent();
-	public void addCourses(Course course);
-	public boolean removeCourse(int id);
+	public void approveStudent();
+	public void addCourses();
+	public void removeCourse();
 	public void generateReport();
 
 }
