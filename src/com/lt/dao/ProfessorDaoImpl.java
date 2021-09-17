@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import org.apache.log4j.Logger;
+
 import com.lt.bean.Course;
 import com.lt.bean.Grade;
 import com.lt.bean.Student;
@@ -16,6 +18,7 @@ import com.lt.utils.DBUtils;
 
 public class ProfessorDaoImpl implements ProfessorDao {
 
+	private static Logger logger=Logger.getLogger(ProfessorDaoImpl.class);
 	public List<Student> getStudentData() {
 		// TODO Auto-generated method stub
 		Connection con = null;
@@ -64,7 +67,7 @@ public class ProfessorDaoImpl implements ProfessorDao {
 			ResultSet rs = ps.executeQuery();
 
 			System.out.println("Show Courses Data Below");
-			System.out.println("\nSR No. \t Course Id   \t Course Name \tCourse Description");
+			System.out.println("\nSR No. \t Course Id   \t Course Name \tCourse Description \t Course Amount \t Professor Name");
 
 			while (rs.next()) {
 				Course course = new Course();
@@ -72,6 +75,8 @@ public class ProfessorDaoImpl implements ProfessorDao {
 				course.setCourseId(rs.getString(2));
 				course.setCourseName(rs.getString(3));
 				course.setCourseDescription(rs.getString(4));
+				course.setCourseAmount(rs.getInt(5));
+				course.setProfessorName(rs.getString(6));
 				list.add(course);
 			}
 
@@ -83,7 +88,7 @@ public class ProfessorDaoImpl implements ProfessorDao {
 		return list;
 	}
 
-	public void getLoginDetails(int userId, String password) {
+	public void getLoginDetails(int userId, String password)  {
 		// TODO Auto-generated method stub
 		Connection con = null;
 		String sql = Constants.PROFESSORgetLoginDetails;
@@ -94,7 +99,7 @@ public class ProfessorDaoImpl implements ProfessorDao {
 			ps.setString(2, password);
 			ResultSet rs = ps.executeQuery();
 			if (rs.next()) {
-
+			
 				if (userId == rs.getInt(1) && password.equals(rs.getString(2))) {
 					System.out.println("You have Login Successfully");
 				}
@@ -104,7 +109,8 @@ public class ProfessorDaoImpl implements ProfessorDao {
 			}
 		} catch (SQLException e) {
 			// TODO: handle exception
-			System.out.println("Professor : Error In getLoginDetails");
+			logger.error("Professor : Error In getLoginDetails");
+			
 		} 
 		
 
@@ -165,7 +171,7 @@ public class ProfessorDaoImpl implements ProfessorDao {
 		return list;
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args)  {
 
 		ProfessorDaoImpl profDao = new ProfessorDaoImpl();
 
@@ -179,7 +185,7 @@ public class ProfessorDaoImpl implements ProfessorDao {
 		List<Course> course = profDao.getCourseData();
 		for (Course c : course) {
 			System.out.println(c.getSrno() + "\t\t" + c.getCourseId() + "\t\t" + c.getCourseName() + "\t\t"
-					+ c.getCourseDescription());
+					+ c.getCourseDescription()+"\t\t"+c.getCourseAmount()+"\t\t"+c.getProfessorName());
 		}
 		Scanner sc = new Scanner(System.in);
 

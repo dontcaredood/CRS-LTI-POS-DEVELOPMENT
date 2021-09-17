@@ -1,0 +1,6 @@
+02:40:21,928  INFO StudentDaoImpl,main:32 - Course has been added
+02:41:28,032  INFO StudentDaoImpl,main:80 - Enter Course Id: 
+02:41:34,341  INFO StudentDaoImpl,main:82 - Enter Course Name: 
+02:41:35,988  INFO StudentDaoImpl,main:84 - Enter Course Description: 
+02:41:39,861  INFO StudentDaoImpl,main:31 - Course has been added
+02:41:39,862  INFO StudentDaoImpl,main:95 - Enter Course Name To Drop Course: 

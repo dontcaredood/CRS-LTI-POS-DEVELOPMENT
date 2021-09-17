@@ -6,6 +6,8 @@ public class Course {
 	private String courseId;
 	private String courseName;
 	private String courseDescription;
+	private int courseAmount;
+	private String professorName;
 	
 	
 	public String getCourseName() {
@@ -31,6 +33,18 @@ public class Course {
 	}
 	public void setCourseDescription(String courseDescription) {
 		this.courseDescription = courseDescription;
+	}
+	public int getCourseAmount() {
+		return courseAmount;
+	}
+	public void setCourseAmount(int courseAmount) {
+		this.courseAmount = courseAmount;
+	}
+	public String getProfessorName() {
+		return professorName;
+	}
+	public void setProfessorName(String professorName) {
+		this.professorName = professorName;
 	}
 	
 	
