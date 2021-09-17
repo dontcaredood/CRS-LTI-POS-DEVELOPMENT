@@ -1,27 +1,27 @@
 package com.lt.bean;
 
 public class Course {
-	private int courseId;
+	private String courseId;
 	private String courseName;
-	private int courseCatalogId;
+	private String courseDescription;
 	
-	public final int getCourseId() {
-		return courseId;
-	}
-	public final void setCourseId(int courseId) {
-		this.courseId = courseId;
-	}
 	public final String getCourseName() {
 		return courseName;
 	}
 	public final void setCourseName(String courseName) {
 		this.courseName = courseName;
 	}
-	public final int getCourseCatalogId() {
-		return courseCatalogId;
+	public String getCourseDescription() {
+		return courseDescription;
 	}
-	public final void setCourseCatalogId(int courseCatalogId) {
-		this.courseCatalogId = courseCatalogId;
+	public void setCourseDescription(String courseDescription) {
+		this.courseDescription = courseDescription;
+	}
+	public String getCourseId() {
+		return courseId;
+	}
+	public void setCourseId(String courseId) {
+		this.courseId = courseId;
 	}
 	
 	

@@ -9,48 +9,34 @@ import java.util.Scanner;
 import com.lt.bean.Course;
 import com.lt.bean.GradeCard;
 import com.lt.bean.Student;
+import com.lt.dao.StudentDaoImpl;
 
 public class StudentInterfaceImpl implements StudentInterface{
-	
+	StudentDaoImpl studentDaoImpl = new StudentDaoImpl();
 	public void signUp() {
-		
-		//String pass;
+		Student student = new Student();
+		Scanner sc= new Scanner(System.in);
 		System.out.println("Student signUp:");
 		System.out.println("----------------------------------------");
-		
-		Scanner sc= new Scanner(System.in);
-		
 		System.out.println("---Welcome----");
 		System.out.println("Enter Student Name");
-		String st=sc.next();
-		
-	//	String stdept=sc.next();
+		student.setStudentName(sc.nextLine());
 		System.out.println("Enter StudentDept::" );
-		String stdept=sc.next();
-		
+		student.setDepartment(sc.nextLine());
 		System.out.println("Enter Student Password");
-		String stpassword=sc.next();
-	
+		student.setPassword(sc.nextLine());
 		System.out.println("Enter Student Confirm Password");
-		String stconfirmpwd=sc.next();
-		
-				
-		if(stpassword.equals(stconfirmpwd)) {
-			System.out.println(st+" "+"Successfully signed up !!");
-			
+		String stconfirmpwd=sc.nextLine();
+		if(student.getPassword().equals(stconfirmpwd)) {
+			studentDaoImpl.signup(student);
+			System.out.println( student.getStudentName()+" "+"Successfully signed up !!");
 		}
 		else
 		{
 			System.out.println("Not succesfully registered! Mismatch the password and confirm password !!");
 			signUp();
 		}
-		 
-		
-		
-		
-		
 	}
-
 	
 	public void login(){
 		
@@ -60,7 +46,7 @@ public class StudentInterfaceImpl implements StudentInterface{
 				String pass;
 				System.out.println("Student Login:");
 				System.out.println("----------------------------------------");
-				HashMap<Integer, String> prof = getLoginDetails();
+				HashMap<Integer, String> prof = studentDaoImpl.getLoginDetails();
 				System.out.println("Enter UserId: ");
 				userId=kb.nextInt();
 				if(prof.containsKey(userId)){
@@ -84,12 +70,6 @@ public class StudentInterfaceImpl implements StudentInterface{
 		
 			}
 	
-	public HashMap<Integer, String> getLoginDetails(){
-		HashMap<Integer, String> student = new HashMap<Integer, String>();
-		student.put(111, "user1");
-		student.put(112, "user2");
-		return student;
-	}
 	
 	public void showMenu(){
 		int i = 0;
@@ -105,7 +85,7 @@ public class StudentInterfaceImpl implements StudentInterface{
 				registerCourses();
 				break;
 			case 3:
-				System.out.println("Logged out successfully.");
+				System.out.println("Logged out successfully.\n");
 				i=5;
 				break;
 			default:
@@ -127,7 +107,7 @@ public class StudentInterfaceImpl implements StudentInterface{
 			}
 		}
 	
-         public List<GradeCard> getStudentsGradeData() {
+       public List<GradeCard> getStudentsGradeData() {
 
 			List<GradeCard> gradeList = new ArrayList<GradeCard>();
 			GradeCard g1 = new GradeCard();
@@ -203,53 +183,27 @@ public class StudentInterfaceImpl implements StudentInterface{
 			List<Course> courseList = new ArrayList<Course>();
 			Course cr = new Course();
 
-			cr.setCourseId(10);
+			cr.setCourseId("1");
 			cr.setCourseName("java");
-			cr.setCourseCatalogId(1);
 			courseList.add(cr);
 
 			Course cr1 = new Course();
-			cr1.setCourseId(11);
+			cr1.setCourseId("2");
 			cr1.setCourseName(".net");
-			cr1.setCourseCatalogId(1);
+			
 			courseList.add(cr1);
 
 			Course cr2 = new Course();
-			cr2.setCourseId(12);
+			cr2.setCourseId("3");
 			cr2.setCourseName("html");
-			cr2.setCourseCatalogId(1);
 			courseList.add(cr2);
 
 			Course cr3 = new Course();
-			cr3.setCourseId(13);
+			cr3.setCourseId("4");
 			cr3.setCourseName("microservices");
-			cr3.setCourseCatalogId(1);
 			courseList.add(cr3);
-
-			Course cr4 = new Course();
-			cr4.setCourseId(14);
-			cr4.setCourseName("springboot");
-			cr4.setCourseCatalogId(1);
-			courseList.add(cr4);
-
-			Course cr5 = new Course();
-			cr5.setCourseId(15);
-			cr5.setCourseName("css");
-			cr5.setCourseCatalogId(2);
-			courseList.add(cr5);
-
-			Course cr6 = new Course();
-			cr6.setCourseId(16);
-			cr6.setCourseName("c");
-			cr6.setCourseCatalogId(2);
-			courseList.add(cr6);
-
-			Course cr7 = new Course();
-			cr7.setCourseId(17);
-			cr7.setCourseName("angular");
-			cr7.setCourseCatalogId(2);
-			courseList.add(cr7);
 			return courseList;
+
 
 		}
 		public void addCourses() {
