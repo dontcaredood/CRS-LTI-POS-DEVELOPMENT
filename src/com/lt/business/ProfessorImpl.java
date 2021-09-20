@@ -5,7 +5,7 @@ import com.lt.dao.ProfessorDaoImpl;
 
 public class ProfessorImpl implements ProfessorInterface {
 
-	ProfessorDaoImpl profDao=new ProfessorDaoImpl();
+	ProfessorDaoImpl profDao=ProfessorDaoImpl.getInstance();
 	
 	
 	@Override

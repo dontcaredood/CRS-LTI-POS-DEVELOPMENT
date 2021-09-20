@@ -2,6 +2,10 @@ package com.lt.bean;
 
 public class GradeCard extends Grade {
 
+	public GradeCard(String courseCode, String courseName, String grade) {
+		super(courseCode, courseName, grade);
+		// TODO Auto-generated constructor stub
+	}
 	private boolean gradeStatus;
 	private String remarks;
 	private String studentName;

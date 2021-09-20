@@ -2,8 +2,9 @@ package com.lt.bean;
 
 import java.util.Date;
 
-public class Payment {
 
+public class Payment {
+	
 	private int billNumber;
 	private Date billDate;
 	private String description;
@@ -54,5 +55,6 @@ public class Payment {
 		this.paymentMethod = paymentMethod;
 	}
 	
+
 	
 }

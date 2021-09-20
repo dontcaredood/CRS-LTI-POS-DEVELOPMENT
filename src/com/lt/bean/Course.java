@@ -10,6 +10,16 @@ public class Course {
 	private String professorName;
 	
 	
+	public Course() {}
+	public Course(String courseId, String courseName, String courseDesc, String professorName) 
+	{
+		super();
+		this.courseId = courseId;
+		this.courseName = courseName;
+		this.setProfessorName(professorName);
+		this.courseDescription = courseDesc;
+	}
+	
 	public String getCourseName() {
 		return courseName;
 	}

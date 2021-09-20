@@ -14,8 +14,15 @@ import com.lt.utils.DBUtils;
 
 public class StudentDaoImpl implements StudentDao {
 
+	private static StudentDaoImpl studentDao=null;
 	private static Logger logger = Logger.getLogger(StudentDaoImpl.class);
 
+	//private Constructor for StudentDaoImp
+	private  StudentDaoImpl() {
+		// TODO Auto-generated constructor stub
+	logger.info("StudentDaoImpl Instance Created");
+	}
+	
 	@Override
 	public void addCourse(Course course) {
 		// TODO Auto-generated method stub
@@ -60,21 +67,21 @@ public class StudentDaoImpl implements StudentDao {
 			}
 			if (isCheck) {
 				ps.execute();
-				System.out.println("Course has been Drop");
+				logger.info("Course has been Drop");
 			} else {
-				System.out.println("Course Name is not Found in Courses");
+				logger.warn("Course Name is not Found in Courses");
 			}
 
 		} catch (SQLException e) {
 			// TODO: handle exception
-			System.out.println("Student : Error In dropCourse method");
+			logger.error("Student : Error In dropCourse method");
 			e.printStackTrace();
 		}
 	}
 
 	public static void main(String[] args) {
 
-		StudentDaoImpl student = new StudentDaoImpl();
+		StudentDaoImpl student = StudentDaoImpl.getInstance();
 		Scanner sc = new Scanner(System.in);
 
 		logger.info("Enter Course Id: ");
@@ -98,4 +105,17 @@ public class StudentDaoImpl implements StudentDao {
 		student.dropCourse(coursename);
 
 	}
+	
+	
+	public static StudentDaoImpl getInstance()
+	{
+		if(studentDao==null)
+		{
+			synchronized (StudentDaoImpl.class) {
+				studentDao=new StudentDaoImpl();
+			}
+		}
+	return studentDao;
+	}
+	
 }

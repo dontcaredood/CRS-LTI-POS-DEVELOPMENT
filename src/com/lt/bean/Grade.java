@@ -8,6 +8,10 @@ public class Grade {
 	private String studentName;
 	private int studentId;
 	
+	public Grade(String courseCode, String courseName, String grade) {
+		// TODO Auto-generated constructor stub
+		
+	}
 	public int getGradeId() {
 		return gradeId;
 	}
