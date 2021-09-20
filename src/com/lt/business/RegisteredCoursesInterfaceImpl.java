@@ -12,24 +12,31 @@ import com.lt.exceptions.CourseNotFoundException;
 public class RegisteredCoursesInterfaceImpl implements RegisteredCoursesInterface{
 
 
-	
-	RegisteredCoursesDaoImpl registeredCoursesDaoImpl =  new RegisteredCoursesDaoImpl();
+	private static volatile RegisteredCoursesInterfaceImpl instance = null;
+
+	private RegisteredCoursesInterfaceImpl() {
+	}
+
+	public static RegisteredCoursesInterfaceImpl getInstance() {
+		if (instance == null) {
+			synchronized (RegisteredCoursesInterfaceImpl.class) {
+				instance = new RegisteredCoursesInterfaceImpl();
+			}
+		}
+		return instance;
+	}
+
+
+	RegisteredCoursesDaoImpl registeredCoursesDaoImpl =  RegisteredCoursesDaoImpl.getInstance();
 
 	public boolean addCourse(String courseCode, int studentId,List<Course> availableCourseList) throws CourseNotFoundException, CourseLimitExceedException, SeatNotAvailableException, SQLException 
 	{
-       
-		  
-
 		return registeredCoursesDaoImpl.addCourse(courseCode, studentId);
-
 	}
 
 	
 	public boolean dropCourse(String courseCode, int studentId,List<Course> registeredCourseList) throws CourseNotFoundException, SQLException {
-		 
-		
 		return registeredCoursesDaoImpl.dropCourse(courseCode, studentId);
-
 	}
 
 	
@@ -60,7 +67,6 @@ public class RegisteredCoursesInterfaceImpl implements RegisteredCoursesInterfac
 
 	public void setRegistrationStatus(int studentId) throws SQLException {
 		registeredCoursesDaoImpl.setRegistrationStatus(studentId);
-
 	}
 
 

@@ -22,11 +22,11 @@ public class AdminInterfaceImpl implements AdminInterface{
 	
 	private static AdminInterfaceImpl adminInterfaceImpl = null;
 	
-	AdminDaoImpl adminDaoImpl = new AdminDaoImpl();
+	AdminDaoImpl adminDaoImpl = AdminDaoImpl.getInstance();
 	private static Logger logger = Logger.getLogger(AdminDaoImpl.class);
 	
-	//public Constructor for AdminInterfaceImpl
-		public AdminInterfaceImpl(){
+	//private Constructor for AdminInterfaceImpl
+		private AdminInterfaceImpl(){
 			logger.info("AdminInterfaceImpl Instance Created");
 		}
 		

@@ -13,7 +13,7 @@ import com.lt.exceptions.GradeNotAddedException;
 
 public class CRSProfessor {
 	private static Logger logger = Logger.getLogger(CRSProfessor.class);
-	ProfessorInterfaceImpl professorInterface= new ProfessorInterfaceImpl();
+	ProfessorInterfaceImpl professorInterface=  ProfessorInterfaceImpl.getInstance();
 	
 	
 	public void createMenu(String profId)

@@ -12,7 +12,7 @@ import com.lt.exceptions.*;
 
 public class CRSAdmin {
 	private static Logger logger = Logger.getLogger(CRSAdmin.class);
-	AdminInterfaceImpl adminInterfaceImpl = new AdminInterfaceImpl();
+	AdminInterfaceImpl adminInterfaceImpl =  AdminInterfaceImpl.getInstance();
 	Scanner scanner = new Scanner(System.in);
 	
 	private static CRSAdmin crsAdmin = null;

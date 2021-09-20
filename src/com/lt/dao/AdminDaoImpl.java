@@ -18,8 +18,8 @@ public class AdminDaoImpl implements AdminDao{
 	private static Logger logger = Logger.getLogger(AdminDaoImpl.class);
 	private PreparedStatement statement = null;
 	
-	//public Constructor for AdminDaoImpl
-	public AdminDaoImpl(){
+	//private Constructor for AdminDaoImpl
+	private AdminDaoImpl(){
 		logger.info("AdminDaoImpl Instance Created");
 	}
 	

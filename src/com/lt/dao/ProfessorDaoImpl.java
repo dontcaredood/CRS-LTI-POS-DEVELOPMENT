@@ -21,7 +21,20 @@ public class ProfessorDaoImpl implements ProfessorDao {
 
 
 	private static Logger logger = Logger.getLogger(ProfessorDaoImpl.class);
+	private static volatile ProfessorDaoImpl instance=null;
 	
+	private ProfessorDaoImpl(){}
+	
+	public static ProfessorDaoImpl getInstance()
+	{
+		if(instance==null)
+		{
+			synchronized(ProfessorDaoImpl.class){
+				instance=new ProfessorDaoImpl();
+			}
+		}
+		return instance;
+	}
 	public List<Course> getCoursesByProfessor(String profId) {
 		Connection connection=DBUtils.getConnection();
 		List<Course> courseList=new ArrayList<Course>();

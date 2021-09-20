@@ -1,5 +1,7 @@
 package com.lt.client;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 import org.apache.log4j.Logger;
@@ -17,9 +19,9 @@ import com.lt.exceptions.UserNotFoundException;
 
 public class CRSApplication {
 	static boolean isValidUser = false;	
-	UserInterfaceImpl userInterfaceImpl = new UserInterfaceImpl();
+	UserInterfaceImpl userInterfaceImpl =  UserInterfaceImpl.getInstance();
 	private static Logger logger = Logger.getLogger(CRSApplication.class);
-	StudentInterfaceImpl studentInterfaceImpl = new StudentInterfaceImpl();
+	StudentInterfaceImpl studentInterfaceImpl =  StudentInterfaceImpl.getInstance();
 
 	public static void main(String[] args){
 		Scanner scan = new Scanner(System.in);
@@ -129,22 +131,28 @@ public class CRSApplication {
 			
 			if(isValidUser)
 			{
+				DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");  
+				LocalDateTime myDateObj = LocalDateTime.now();
+				String formattedDate = myDateObj.format(myFormatObj);  
+				 
 				System.out.println("Hello "+userId);
 				String role=userInterfaceImpl.getRole(userId);
 				Role userRole=Role.stringToName(role);
 				switch(userRole)
 				{
 				case ADMIN:
+					System.out.println(formattedDate + " Login Successful");
 					CRSAdmin adminMenu=new CRSAdmin();
 					adminMenu.createMenu();
 					break;
 				case PROFESSOR:
+					System.out.println(formattedDate + " Login Successful");
 					CRSProfessor professorMenu=new CRSProfessor();
 					professorMenu.createMenu(userId);
 					
 					break;
 				case STUDENT:
-					
+					System.out.println(formattedDate + " Login Successful");
 					int studentId=studentInterfaceImpl.getStudentId(userId);
 					boolean isApproved=studentInterfaceImpl.isApproved(studentId);
 					if(isApproved)

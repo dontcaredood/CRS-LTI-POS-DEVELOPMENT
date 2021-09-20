@@ -18,9 +18,23 @@ import com.lt.exceptions.*;
 public class StudentInterfaceImpl implements StudentInterface{
 	
 	private static Logger logger = Logger.getLogger(StudentInterfaceImpl.class);
-	StudentDaoImpl studentDaoImpl= new StudentDaoImpl();
+	StudentDaoImpl studentDaoImpl=  StudentDaoImpl.getInstance();
+	private static volatile StudentInterfaceImpl instance=null;
+	private StudentInterfaceImpl()
+	{
 
+	}
 	
+	public static StudentInterfaceImpl getInstance()
+	{
+		if(instance==null)
+		{
+			synchronized(StudentInterfaceImpl.class){
+				instance=new StudentInterfaceImpl();
+			}
+		}
+		return instance;
+	}
 
 	public int register(Student student) throws StudentNotRegisteredException{
 		int studentId;
