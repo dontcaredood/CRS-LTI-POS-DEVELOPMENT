@@ -31,12 +31,7 @@ public class UserDaoImpl implements UserDao{
 		return instance;
 	}
 
-	/**
-	 * Method to update password of user in DataBase
-	 * @param userID
-	 * @param newPassword
-	 * @return Update Password operation Status
-	 */
+	
 	public boolean updatePassword(String userId, String newPassword) {
 		Connection connection= DBUtils.getConnection();
 		try {
@@ -63,13 +58,7 @@ public class UserDaoImpl implements UserDao{
 		return false;
 	}
 	
-	/**
-	 * Method to verify credentials of Users from DataBase
-	 * @param userId
-	 * @param password
-	 * @return Verify credentials operation status
-	 * @throws UserNotFoundException
-	 */
+	
 	public boolean verifyCredentials(String userId, String password) throws UserNotFoundException {
 		Connection connection = (Connection) DBUtils.getConnection();
 		try
@@ -102,21 +91,13 @@ public class UserDaoImpl implements UserDao{
 		return false;
 	}
 
-	/**
-	 * Method to update password of user in DataBase
-	 * @param userID
-	 * @return Update Password operation Status
-	 */
+	
 	public boolean updatePassword(String userID) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 	
-	/**
-	 * Method to get Role of User from DataBase
-	 * @param userId
-	 * @return Role
-	 */
+	
 	public String getRole(String userId) {
 		Connection connection=DBUtils.getConnection();
 		try {
