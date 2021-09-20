@@ -1,27 +1,36 @@
 package com.lt.bean;
 
 public class RegisteredCourses {
-	private String courseTitle;
-	private Student student;
-	private String selectedCourse;
-	public String getCourseTitle() {
-		return courseTitle;
+	
+	private String courseCode;
+	private String courseName;
+	private int studentId;
+	
+	public RegisteredCourses(String courseCode, String courseName, int studentId) {
+		super();
+		this.courseCode = courseCode;
+		this.courseName = courseName;
+		this.studentId = studentId;
 	}
-	public void setCourseTitle(String courseTitle) {
-		this.courseTitle = courseTitle;
+	public int getStudentId() {
+		return studentId;
 	}
-	public Student getStudent() {
-		return student;
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
 	}
-	public void setStudent(Student student) {
-		this.student = student;
+	public String getCourseName() {
+		return courseName;
 	}
-	public String getSelectedCourse() {
-		return selectedCourse;
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
 	}
-	public void setSelectedCourse(String selectedCourse) {
-		this.selectedCourse = selectedCourse;
-	} 
+	public String getCourseCode() {
+		return courseCode;
+	}
+	public void setCourseCode(String courseCode) {
+		this.courseCode = courseCode;
+	}
+	
 	
 	
 }

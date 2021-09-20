@@ -1,51 +1,37 @@
 package com.lt.bean;
 
 public class Grade {
-	public Grade(){}
-	public Grade( String gStatus, float gPoints, int sId){
-		this.setGradePoints(gPoints);
-		this.studentId = sId;
-		this.gradeStatus = gStatus;
-		System.out.println("Student Id:\tGrade Points\tGrade Status");
-		System.out.println(sId+"\t\t"+gPoints+"\t\t"+gStatus);
-	}
-	private int gradeId;
-	private double gradePoints;
-	private String studentName;
-	private int studentId;
-	private String gradeStatus;
 	
-	public int getGradeId() {
-		return gradeId;
+	private String courseCode;
+	private String courseName;
+	private String grade;
+	
+	
+	public Grade(String courseCode, String courseName, String grade) {
+		super();
+		this.courseCode = courseCode;
+		this.courseName = courseName;
+		this.grade = grade;
 	}
-	public void setGradeId(int gradeId) {
-		this.gradeId = gradeId;
+	public String getCourseCode() {
+		return courseCode;
+	}
+	public void setCourseCode(String courseCode) {
+		this.courseCode = courseCode;
+	}
+	public String getCourseName() {
+		return courseName;
+	}
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
+	}
+	public String getGrade() {
+		return grade;
+	}
+	public void setGrade(String grade) {
+		this.grade = grade;
 	}
 	
-	public String getStudentName() {
-		return studentName;
-	}
-	public void setStudentName(String studentName) {
-		this.studentName = studentName;
-	}
-	public int getStudentId() {
-		return studentId;
-	}
-	public void setStudentId(int studentId) {
-		this.studentId = studentId;
-	}
-	public double getGradePoints() {
-		return gradePoints;
-	}
-	public void setGradePoints(double gradePoints) {
-		this.gradePoints = gradePoints;
-	}
-	public String getGradeStatus() {
-		return gradeStatus;
-	}
-	public void setGradeStatus(String gradeStatus) {
-		this.gradeStatus = gradeStatus;
-	}
 	
 	
 }

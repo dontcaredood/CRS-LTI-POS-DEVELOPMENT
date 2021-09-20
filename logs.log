@@ -1,0 +1,713 @@
+2021-09-19 20:30:04,077 com.lt.client.CRSApplication:27 [INFO] : Invalid Input
+2021-09-19 20:30:22,741 com.lt.client.CRSApplication:27 [INFO] : Invalid Input
+2021-09-19 20:30:57,035 com.lt.client.CRSApplication:27 [INFO] : Invalid Input
+2021-09-19 20:30:59,844 com.lt.client.CRSApplication:75 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:30:59,852 com.lt.client.CRSApplication:85 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:30:59,853 com.lt.client.CRSApplication:86 [INFO] : Name:
+2021-09-19 20:31:03,156 com.lt.client.CRSApplication:88 [INFO] : Email:
+2021-09-19 20:31:04,109 com.lt.client.CRSApplication:90 [INFO] : Password:
+2021-09-19 20:31:05,445 com.lt.client.CRSApplication:92 [INFO] : Gender: 	 1: Male 	 2.Female	 3.Other
+2021-09-19 20:31:06,026 com.lt.client.CRSApplication:51 [ERROR] : CRSAPPLICATION : java.util.InputMismatchException
+2021-09-19 20:31:48,015 com.lt.client.CRSApplication:27 [INFO] : Invalid Input
+2021-09-19 20:31:50,354 com.lt.client.CRSApplication:130 [INFO] : -----------------Login------------------
+2021-09-19 20:31:50,354 com.lt.client.CRSApplication:131 [INFO] : Email:
+2021-09-19 20:32:01,051 com.lt.client.CRSApplication:133 [INFO] : Password:
+2021-09-19 20:32:03,840 com.lt.client.CRSApplication:139 [INFO] : Hello sandy.com
+2021-09-19 20:32:03,876 com.lt.dao.UserDaoImpl:128 [ERROR] : No operations allowed after connection closed.
+2021-09-19 20:32:03,906 com.lt.client.CRSApplication:51 [ERROR] : CRSAPPLICATION : java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "role" is null
+2021-09-19 20:32:31,175 com.lt.client.CRSApplication:27 [INFO] : Invalid Input
+2021-09-19 20:32:32,778 com.lt.client.CRSApplication:130 [INFO] : -----------------Login------------------
+2021-09-19 20:32:32,783 com.lt.client.CRSApplication:131 [INFO] : Email:
+2021-09-19 20:32:34,153 com.lt.client.CRSApplication:133 [INFO] : Password:
+2021-09-19 20:32:35,272 com.lt.client.CRSApplication:130 [INFO] : -----------------Login------------------
+2021-09-19 20:32:35,273 com.lt.client.CRSApplication:131 [INFO] : Email:
+2021-09-19 20:32:55,490 com.lt.client.CRSApplication:27 [INFO] : Invalid Input
+2021-09-19 20:32:57,835 com.lt.client.CRSApplication:75 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:32:57,841 com.lt.client.CRSApplication:85 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:32:57,842 com.lt.client.CRSApplication:86 [INFO] : Name:
+2021-09-19 20:33:01,275 com.lt.client.CRSApplication:88 [INFO] : Email:
+2021-09-19 20:33:03,050 com.lt.client.CRSApplication:90 [INFO] : Password:
+2021-09-19 20:33:09,578 com.lt.client.CRSApplication:92 [INFO] : Gender: 	 1: Male 	 2.Female	 3.Other
+2021-09-19 20:33:11,295 com.lt.client.CRSApplication:95 [INFO] : Branch:
+2021-09-19 20:33:15,806 com.lt.client.CRSApplication:97 [INFO] : Batch:
+2021-09-19 20:33:17,046 com.lt.client.CRSApplication:100 [INFO] : Address:
+2021-09-19 20:33:18,168 com.lt.client.CRSApplication:102 [INFO] : Country
+2021-09-19 20:33:19,888 com.lt.client.CRSApplication:122 [ERROR] : Something went wrong! cs not registered. Please try again
+2021-09-19 20:33:19,889 com.lt.client.CRSApplication:75 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:33:19,889 com.lt.client.CRSApplication:85 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:33:19,891 com.lt.client.CRSApplication:86 [INFO] : Name:
+2021-09-19 20:35:48,043 com.lt.client.CRSApplication:27 [INFO] : Invalid Input
+2021-09-19 20:35:50,335 com.lt.client.CRSApplication:75 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:35:50,337 com.lt.client.CRSApplication:85 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:35:50,337 com.lt.client.CRSApplication:86 [INFO] : Name:
+2021-09-19 20:35:51,310 com.lt.client.CRSApplication:88 [INFO] : Email:
+2021-09-19 20:35:52,047 com.lt.client.CRSApplication:90 [INFO] : Password:
+2021-09-19 20:35:52,742 com.lt.client.CRSApplication:92 [INFO] : Gender: 	 1: Male 	 2.Female	 3.Other
+2021-09-19 20:35:53,971 com.lt.client.CRSApplication:51 [ERROR] : CRSAPPLICATION : java.util.InputMismatchException
+2021-09-19 20:36:00,641 com.lt.client.CRSApplication:27 [INFO] : Invalid Input
+2021-09-19 20:36:03,136 com.lt.client.CRSApplication:75 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:36:03,138 com.lt.client.CRSApplication:85 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:36:03,139 com.lt.client.CRSApplication:86 [INFO] : Name:
+2021-09-19 20:36:04,864 com.lt.client.CRSApplication:88 [INFO] : Email:
+2021-09-19 20:36:05,479 com.lt.client.CRSApplication:90 [INFO] : Password:
+2021-09-19 20:36:06,915 com.lt.client.CRSApplication:92 [INFO] : Gender: 	 1: Male 	 2.Female	 3.Other
+2021-09-19 20:36:08,023 com.lt.client.CRSApplication:95 [INFO] : Branch:
+2021-09-19 20:36:55,381 com.lt.client.CRSApplication:27 [INFO] : Invalid Input
+2021-09-19 20:37:05,080 com.lt.client.CRSApplication:27 [INFO] : Invalid Input
+2021-09-19 20:37:12,628 com.lt.client.CRSApplication:75 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:37:21,904 com.lt.client.CRSApplication:85 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:37:21,905 com.lt.client.CRSApplication:86 [INFO] : Name:
+2021-09-19 20:37:24,903 com.lt.client.CRSApplication:88 [INFO] : Email:
+2021-09-19 20:37:25,611 com.lt.client.CRSApplication:90 [INFO] : Password:
+2021-09-19 20:37:28,398 com.lt.client.CRSApplication:92 [INFO] : Gender: 	 1: Male 	 2.Female	 3.Other
+2021-09-19 20:37:29,617 com.lt.client.CRSApplication:95 [INFO] : Branch:
+2021-09-19 20:37:47,123 com.lt.client.CRSApplication:27 [INFO] : Invalid Input
+2021-09-19 20:37:58,121 com.lt.client.CRSApplication:75 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:37:58,123 com.lt.client.CRSApplication:85 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:37:58,124 com.lt.client.CRSApplication:86 [INFO] : Name:
+2021-09-19 20:38:07,398 com.lt.client.CRSApplication:27 [INFO] : Invalid Input
+2021-09-19 20:38:09,647 com.lt.client.CRSApplication:75 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:38:09,649 com.lt.client.CRSApplication:85 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:38:09,649 com.lt.client.CRSApplication:86 [INFO] : Name:
+2021-09-19 20:38:11,959 com.lt.client.CRSApplication:88 [INFO] : Email:
+2021-09-19 20:38:12,819 com.lt.client.CRSApplication:90 [INFO] : Password:
+2021-09-19 20:38:13,650 com.lt.client.CRSApplication:92 [INFO] : Gender: 	 1: Male 	 2.Female	 3.Other
+2021-09-19 20:38:14,511 com.lt.client.CRSApplication:51 [ERROR] : CRSAPPLICATION : java.util.InputMismatchException
+2021-09-19 20:38:19,966 com.lt.client.CRSApplication:27 [INFO] : Invalid Input
+2021-09-19 20:38:21,794 com.lt.client.CRSApplication:75 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:38:21,795 com.lt.client.CRSApplication:85 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:38:21,795 com.lt.client.CRSApplication:86 [INFO] : Name:
+2021-09-19 20:38:22,714 com.lt.client.CRSApplication:88 [INFO] : Email:
+2021-09-19 20:38:23,409 com.lt.client.CRSApplication:90 [INFO] : Password:
+2021-09-19 20:38:24,560 com.lt.client.CRSApplication:92 [INFO] : Gender: 	 1: Male 	 2.Female	 3.Other
+2021-09-19 20:38:25,870 com.lt.client.CRSApplication:95 [INFO] : Branch:
+2021-09-19 20:39:43,237 com.lt.client.CRSApplication:27 [INFO] : Invalid Input
+2021-09-19 20:39:49,434 com.lt.client.CRSApplication:75 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:39:49,440 com.lt.client.CRSApplication:85 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:39:49,441 com.lt.client.CRSApplication:86 [INFO] : Name:
+2021-09-19 20:39:51,097 com.lt.client.CRSApplication:88 [INFO] : Email:
+2021-09-19 20:39:52,289 com.lt.client.CRSApplication:90 [INFO] : Password:
+2021-09-19 20:39:53,445 com.lt.client.CRSApplication:92 [INFO] : Gender: 	 1: Male 	 2.Female	 3.Other
+2021-09-19 20:39:54,605 com.lt.client.CRSApplication:95 [INFO] : Branch:
+2021-09-19 20:40:24,891 com.lt.client.CRSApplication:27 [INFO] : Invalid Input
+2021-09-19 20:40:27,456 com.lt.client.CRSApplication:75 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:40:27,462 com.lt.client.CRSApplication:85 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:40:27,463 com.lt.client.CRSApplication:86 [INFO] : Name:
+2021-09-19 20:40:48,141 com.lt.client.CRSApplication:27 [INFO] : Invalid Input
+2021-09-19 20:40:50,122 com.lt.client.CRSApplication:27 [INFO] : Invalid Input
+2021-09-19 20:40:51,496 com.lt.client.CRSApplication:75 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:40:51,497 com.lt.client.CRSApplication:85 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:40:51,497 com.lt.client.CRSApplication:86 [INFO] : Name:
+2021-09-19 20:40:52,734 com.lt.client.CRSApplication:88 [INFO] : Email:
+2021-09-19 20:40:53,286 com.lt.client.CRSApplication:90 [INFO] : Password:
+2021-09-19 20:40:53,832 com.lt.client.CRSApplication:92 [INFO] : Gender: 	 1: Male 	 2.Female	 3.Other
+2021-09-19 20:40:54,589 com.lt.client.CRSApplication:95 [INFO] : Branch:
+2021-09-19 20:40:57,741 com.lt.client.CRSApplication:98 [INFO] : Address:
+2021-09-19 20:43:14,918 com.lt.client.CRSApplication:27 [INFO] : Invalid Input
+2021-09-19 20:43:18,064 com.lt.client.CRSApplication:75 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:43:18,070 com.lt.client.CRSApplication:85 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:43:18,072 com.lt.client.CRSApplication:86 [INFO] : Name:
+2021-09-19 20:43:19,433 com.lt.client.CRSApplication:88 [INFO] : Email:
+2021-09-19 20:43:20,319 com.lt.client.CRSApplication:90 [INFO] : Password:
+2021-09-19 20:43:21,701 com.lt.client.CRSApplication:92 [INFO] : Gender: 	 1: Male 	 2.Female	 3.Other
+2021-09-19 20:43:23,288 com.lt.client.CRSApplication:95 [INFO] : Branch:
+2021-09-19 20:43:25,636 com.lt.client.CRSApplication:98 [INFO] : Address:
+2021-09-19 20:43:28,110 com.lt.client.CRSApplication:116 [ERROR] : Something went wrong! 1 not registered. Please try again
+2021-09-19 20:43:28,111 com.lt.client.CRSApplication:75 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:43:28,111 com.lt.client.CRSApplication:85 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:43:28,112 com.lt.client.CRSApplication:86 [INFO] : Name:
+2021-09-19 20:43:35,611 com.lt.client.CRSApplication:27 [INFO] : Invalid Input
+2021-09-19 20:43:37,606 com.lt.client.CRSApplication:75 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:43:37,608 com.lt.client.CRSApplication:85 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:43:37,608 com.lt.client.CRSApplication:86 [INFO] : Name:
+2021-09-19 20:43:40,414 com.lt.client.CRSApplication:88 [INFO] : Email:
+2021-09-19 20:43:41,043 com.lt.client.CRSApplication:90 [INFO] : Password:
+2021-09-19 20:43:41,847 com.lt.client.CRSApplication:92 [INFO] : Gender: 	 1: Male 	 2.Female	 3.Other
+2021-09-19 20:43:42,848 com.lt.client.CRSApplication:95 [INFO] : Branch:
+2021-09-19 20:43:44,419 com.lt.client.CRSApplication:98 [INFO] : Address:
+2021-09-19 20:44:57,918 com.lt.client.CRSApplication:27 [INFO] : Invalid Input
+2021-09-19 20:44:59,936 com.lt.client.CRSApplication:75 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:44:59,936 com.lt.client.CRSApplication:85 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:44:59,937 com.lt.client.CRSApplication:86 [INFO] : Name:
+2021-09-19 20:45:01,109 com.lt.client.CRSApplication:88 [INFO] : Email:
+2021-09-19 20:45:01,783 com.lt.client.CRSApplication:90 [INFO] : Password:
+2021-09-19 20:45:02,421 com.lt.client.CRSApplication:92 [INFO] : Gender: 	 1: Male 	 2.Female	 3.Other
+2021-09-19 20:45:03,432 com.lt.client.CRSApplication:95 [INFO] : Branch:
+2021-09-19 20:45:05,741 com.lt.client.CRSApplication:98 [INFO] : Address:
+2021-09-19 20:46:28,603 com.lt.client.CRSApplication:75 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:46:28,606 com.lt.client.CRSApplication:85 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:46:28,607 com.lt.client.CRSApplication:86 [INFO] : Name:
+2021-09-19 20:46:28,608 com.lt.client.CRSApplication:88 [INFO] : Email:
+2021-09-19 20:46:37,620 com.lt.client.CRSApplication:27 [INFO] : Invalid Input
+2021-09-19 20:46:46,097 com.lt.client.CRSApplication:27 [INFO] : Invalid Input
+2021-09-19 20:47:05,791 com.lt.client.CRSApplication:74 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:47:05,795 com.lt.client.CRSApplication:84 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:47:05,799 com.lt.client.CRSApplication:85 [INFO] : Name:
+2021-09-19 20:49:56,847 com.lt.client.CRSApplication:74 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:49:56,857 com.lt.client.CRSApplication:84 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:49:56,862 com.lt.client.CRSApplication:85 [INFO] : Name:
+2021-09-19 20:50:04,736 com.lt.client.CRSApplication:87 [INFO] : Email:
+2021-09-19 20:50:08,415 com.lt.client.CRSApplication:89 [INFO] : Password:
+2021-09-19 20:50:11,855 com.lt.client.CRSApplication:91 [INFO] : Gender: 	 1: Male 	 2.Female	 3.Other
+2021-09-19 20:50:13,435 com.lt.client.CRSApplication:94 [INFO] : Branch:
+2021-09-19 20:50:17,141 com.lt.client.CRSApplication:97 [INFO] : Address:
+2021-09-19 20:50:28,484 com.lt.client.CRSApplication:74 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:50:28,486 com.lt.client.CRSApplication:84 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:50:28,487 com.lt.client.CRSApplication:85 [INFO] : Name:
+2021-09-19 20:57:33,590 com.lt.client.CRSApplication:123 [INFO] : -----------------Login------------------
+2021-09-19 20:57:33,595 com.lt.client.CRSApplication:124 [INFO] : Email:
+2021-09-19 20:57:38,334 com.lt.client.CRSApplication:126 [INFO] : Password:
+2021-09-19 20:57:42,420 com.lt.client.CRSApplication:123 [INFO] : -----------------Login------------------
+2021-09-19 20:57:42,421 com.lt.client.CRSApplication:124 [INFO] : Email:
+2021-09-19 20:57:53,980 com.lt.client.CRSApplication:74 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:57:53,991 com.lt.client.CRSApplication:84 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:57:53,992 com.lt.client.CRSApplication:85 [INFO] : Name:
+2021-09-19 20:58:13,456 com.lt.client.CRSApplication:81 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:58:13,464 com.lt.client.CRSApplication:82 [INFO] : Name:
+2021-09-19 20:58:16,878 com.lt.client.CRSApplication:84 [INFO] : Email:
+2021-09-19 20:58:19,990 com.lt.client.CRSApplication:86 [INFO] : Password:
+2021-09-19 20:58:23,461 com.lt.client.CRSApplication:88 [INFO] : Gender: 	 1: Male 	 2.Female	 3.Other
+2021-09-19 20:58:25,245 com.lt.client.CRSApplication:91 [INFO] : Branch:
+2021-09-19 20:58:29,107 com.lt.client.CRSApplication:94 [INFO] : Address:
+2021-09-19 20:59:03,141 com.lt.client.CRSApplication:81 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:59:03,146 com.lt.client.CRSApplication:82 [INFO] : Name:
+2021-09-19 20:59:05,898 com.lt.client.CRSApplication:84 [INFO] : Email:
+2021-09-19 20:59:11,677 com.lt.client.CRSApplication:86 [INFO] : Password:
+2021-09-19 20:59:13,779 com.lt.client.CRSApplication:88 [INFO] : Gender: 	 1: Male 	 2.Female	 3.Other
+2021-09-19 20:59:15,206 com.lt.client.CRSApplication:90 [INFO] : Branch:
+2021-09-19 20:59:17,437 com.lt.client.CRSApplication:93 [INFO] : Address:
+2021-09-19 20:59:22,178 com.lt.client.CRSApplication:106 [INFO] : 1004 created successfully.
+2021-09-19 20:59:22,181 com.lt.client.CRSApplication:81 [INFO] : ---------------Student Registration-------------
+2021-09-19 20:59:22,183 com.lt.client.CRSApplication:82 [INFO] : Name:
+2021-09-19 21:00:04,077 com.lt.client.CRSApplication:81 [INFO] : ---------------Student Registration-------------
+2021-09-19 21:00:04,082 com.lt.client.CRSApplication:82 [INFO] : Name:
+2021-09-19 21:00:06,843 com.lt.client.CRSApplication:84 [INFO] : Email:
+2021-09-19 21:00:09,250 com.lt.client.CRSApplication:86 [INFO] : Password:
+2021-09-19 21:00:12,877 com.lt.client.CRSApplication:88 [INFO] : Gender: 	 1: Male 	 2.Female	 3.Other
+2021-09-19 21:00:14,258 com.lt.client.CRSApplication:90 [INFO] : Branch:
+2021-09-19 21:00:16,467 com.lt.client.CRSApplication:93 [INFO] : Address:
+2021-09-19 21:00:20,942 com.lt.client.CRSApplication:106 [INFO] : 1005 created successfully.
+2021-09-19 21:00:20,954 com.lt.client.CRSApplication:81 [INFO] : ---------------Student Registration-------------
+2021-09-19 21:00:20,956 com.lt.client.CRSApplication:82 [INFO] : Name:
+2021-09-19 21:01:02,399 com.lt.client.CRSApplication:81 [INFO] : ---------------Student Registration-------------
+2021-09-19 21:01:02,426 com.lt.client.CRSApplication:82 [INFO] : Name:
+2021-09-19 21:01:04,427 com.lt.client.CRSApplication:84 [INFO] : Email:
+2021-09-19 21:01:05,523 com.lt.client.CRSApplication:86 [INFO] : Password:
+2021-09-19 21:01:06,556 com.lt.client.CRSApplication:88 [INFO] : Gender: 	 1: Male 	 2.Female	 3.Other
+2021-09-19 21:01:07,752 com.lt.client.CRSApplication:90 [INFO] : Branch:
+2021-09-19 21:01:10,866 com.lt.client.CRSApplication:93 [INFO] : Address:
+2021-09-19 21:03:02,734 com.lt.client.CRSApplication:106 [INFO] : 1006 created successfully.
+2021-09-19 21:03:02,737 com.lt.client.CRSApplication:81 [INFO] : ---------------Student Registration-------------
+2021-09-19 21:03:02,738 com.lt.client.CRSApplication:82 [INFO] : Name:
+2021-09-19 21:03:06,624 com.lt.client.CRSApplication:84 [INFO] : Email:
+2021-09-19 21:03:08,475 com.lt.client.CRSApplication:86 [INFO] : Password:
+2021-09-19 21:03:09,058 com.lt.client.CRSApplication:88 [INFO] : Gender: 	 1: Male 	 2.Female	 3.Other
+2021-09-19 21:03:10,241 com.lt.client.CRSApplication:90 [INFO] : Branch:
+2021-09-19 21:03:11,186 com.lt.client.CRSApplication:93 [INFO] : Address:
+2021-09-19 21:03:26,998 com.lt.client.CRSApplication:81 [INFO] : ---------------Student Registration-------------
+2021-09-19 21:03:27,006 com.lt.client.CRSApplication:82 [INFO] : Name:
+2021-09-19 21:03:28,334 com.lt.client.CRSApplication:84 [INFO] : Email:
+2021-09-19 21:03:29,837 com.lt.client.CRSApplication:86 [INFO] : Password:
+2021-09-19 21:03:31,636 com.lt.client.CRSApplication:88 [INFO] : Gender: 	 1: Male 	 2.Female	 3.Other
+2021-09-19 21:03:33,525 com.lt.client.CRSApplication:90 [INFO] : Branch:
+2021-09-19 21:03:42,334 com.lt.client.CRSApplication:111 [ERROR] : Something went wrong!  not registered. Please try again
+2021-09-19 21:03:42,335 com.lt.client.CRSApplication:81 [INFO] : ---------------Student Registration-------------
+2021-09-19 21:03:42,336 com.lt.client.CRSApplication:82 [INFO] : Name:
+2021-09-19 21:04:22,957 com.lt.client.CRSApplication:81 [INFO] : ---------------Student Registration-------------
+2021-09-19 21:04:22,964 com.lt.client.CRSApplication:82 [INFO] : Name:
+2021-09-19 21:04:26,827 com.lt.client.CRSApplication:84 [INFO] : Email:
+2021-09-19 21:04:28,132 com.lt.client.CRSApplication:86 [INFO] : Password:
+2021-09-19 21:04:29,403 com.lt.client.CRSApplication:88 [INFO] : Gender: 	 1: Male 	 2.Female	 3.Other
+2021-09-19 21:04:30,971 com.lt.client.CRSApplication:90 [INFO] : Branch:
+2021-09-19 21:04:32,325 com.lt.client.CRSApplication:93 [INFO] : Address:
+2021-09-19 21:05:02,766 com.lt.client.CRSApplication:81 [INFO] : ---------------Student Registration-------------
+2021-09-19 21:05:02,772 com.lt.client.CRSApplication:82 [INFO] : Name:
+2021-09-19 21:05:04,229 com.lt.client.CRSApplication:84 [INFO] : Email:
+2021-09-19 21:05:05,026 com.lt.client.CRSApplication:86 [INFO] : Password:
+2021-09-19 21:05:05,730 com.lt.client.CRSApplication:88 [INFO] : Gender: 	 1: Male 	 2.Female	 3.Other
+2021-09-19 21:05:07,081 com.lt.client.CRSApplication:90 [INFO] : Branch:
+2021-09-19 21:05:08,322 com.lt.client.CRSApplication:93 [INFO] : Address:
+2021-09-19 21:05:15,162 com.lt.client.CRSApplication:81 [INFO] : ---------------Student Registration-------------
+2021-09-19 21:05:15,166 com.lt.client.CRSApplication:82 [INFO] : Name:
+2021-09-19 21:05:31,589 com.lt.client.CRSApplication:81 [INFO] : ---------------Student Registration-------------
+2021-09-19 21:05:31,593 com.lt.client.CRSApplication:82 [INFO] : Name:
+2021-09-19 21:05:32,556 com.lt.client.CRSApplication:84 [INFO] : Email:
+2021-09-19 21:05:33,572 com.lt.client.CRSApplication:86 [INFO] : Password:
+2021-09-19 21:05:34,722 com.lt.client.CRSApplication:88 [INFO] : Gender: 	 1: Male 	 2.Female	 3.Other
+2021-09-19 21:05:36,161 com.lt.client.CRSApplication:90 [INFO] : Branch:
+2021-09-19 21:05:38,141 com.lt.client.CRSApplication:93 [INFO] : Address:
+2021-09-19 21:05:39,814 com.lt.client.CRSApplication:106 [INFO] : 1007 created successfully.
+2021-09-19 21:05:39,817 com.lt.client.CRSApplication:81 [INFO] : ---------------Student Registration-------------
+2021-09-19 21:05:39,819 com.lt.client.CRSApplication:82 [INFO] : Name:
+2021-09-19 21:07:03,836 com.lt.client.CRSApplication:81 [INFO] : ---------------Student Registration-------------
+2021-09-19 21:07:03,840 com.lt.client.CRSApplication:82 [INFO] : Name:
+2021-09-19 21:07:07,590 com.lt.client.CRSApplication:81 [INFO] : ---------------Student Registration-------------
+2021-09-19 21:07:07,594 com.lt.client.CRSApplication:82 [INFO] : Name:
+2021-09-19 21:07:08,971 com.lt.client.CRSApplication:84 [INFO] : Email:
+2021-09-19 21:07:10,259 com.lt.client.CRSApplication:86 [INFO] : Password:
+2021-09-19 21:07:11,484 com.lt.client.CRSApplication:88 [INFO] : Gender: 	 1: Male 	 2.Female	 3.Other
+2021-09-19 21:07:12,433 com.lt.client.CRSApplication:90 [INFO] : Branch:
+2021-09-19 21:07:13,522 com.lt.client.CRSApplication:93 [INFO] : Address:
+2021-09-19 21:07:16,005 com.lt.client.CRSApplication:106 [INFO] : 1008 created successfully.
+2021-09-19 21:07:23,641 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:07:23,642 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:08:09,046 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:08:09,053 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:08:10,284 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:08:11,775 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 21:08:11,790 com.lt.dao.UserDaoImpl:128 [ERROR] : No operations allowed after connection closed.
+2021-09-19 21:08:11,818 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "role" is null
+2021-09-19 21:08:27,246 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:08:27,254 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:08:28,692 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:08:30,083 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 21:08:30,102 com.lt.dao.UserDaoImpl:128 [ERROR] : No operations allowed after connection closed.
+2021-09-19 21:08:30,105 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "role" is null
+2021-09-19 21:08:37,325 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:08:37,332 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:08:42,279 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:11:16,332 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:11:16,337 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:11:17,780 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:11:19,125 com.lt.dao.UserDaoImpl:84 [INFO] : Something went wrong, please try again! Column Index out of range, 4 > 1. 
+2021-09-19 21:11:29,898 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:11:29,905 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:11:36,696 com.lt.dao.UserDaoImpl:84 [INFO] : Something went wrong, please try again! Column Index out of range, 4 > 1. 
+2021-09-19 21:11:40,714 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:11:40,715 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:11:45,938 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:11:57,368 com.lt.dao.UserDaoImpl:84 [INFO] : Something went wrong, please try again! No operations allowed after connection closed.
+2021-09-19 21:12:01,617 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:12:01,619 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:12:02,334 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:12:10,223 com.lt.dao.UserDaoImpl:84 [INFO] : Something went wrong, please try again! No operations allowed after connection closed.
+2021-09-19 21:12:13,197 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-19 21:12:13,199 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:12:13,202 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:12:13,202 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-19 21:12:13,205 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:12:13,205 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:12:20,178 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:12:20,184 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:12:21,314 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:13:07,797 com.lt.dao.UserDaoImpl:85 [INFO] : Something went wrong, please try again! Before start of result set
+2021-09-19 21:13:13,308 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:13:13,336 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:13:14,835 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:14:27,035 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:14:27,041 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:14:28,808 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:15:49,040 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:15:49,041 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:15:51,150 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:15:57,588 com.lt.dao.UserDaoImpl:88 [INFO] : Something went wrong, please try again! No operations allowed after connection closed.
+2021-09-19 21:17:45,634 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:17:45,639 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:17:46,465 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:18:29,554 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:18:29,558 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:18:30,456 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:18:31,942 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 21:18:31,961 com.lt.dao.UserDaoImpl:128 [ERROR] : No operations allowed after connection closed.
+2021-09-19 21:18:32,004 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "role" is null
+2021-09-19 21:18:59,786 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:18:59,790 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:19:00,864 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:19:02,048 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 21:19:02,077 com.lt.dao.UserDaoImpl:128 [ERROR] : No operations allowed after connection closed.
+2021-09-19 21:19:02,080 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "role" is null
+2021-09-19 21:19:43,938 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:19:43,945 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:19:44,819 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:19:50,357 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 21:19:50,383 com.lt.dao.UserDaoImpl:128 [ERROR] : No operations allowed after connection closed.
+2021-09-19 21:19:50,385 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "role" is null
+2021-09-19 21:20:40,834 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:20:40,838 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:20:41,683 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:20:42,951 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 21:20:42,980 com.lt.dao.UserDaoImpl:128 [ERROR] : No operations allowed after connection closed.
+2021-09-19 21:20:42,983 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "role" is null
+2021-09-19 21:20:50,058 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:20:50,064 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:20:50,882 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:20:52,105 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 21:20:52,125 com.lt.dao.UserDaoImpl:128 [ERROR] : No operations allowed after connection closed.
+2021-09-19 21:20:52,128 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "role" is null
+2021-09-19 21:21:08,737 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:21:08,742 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:21:09,649 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:21:11,146 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 21:21:11,165 com.lt.dao.UserDaoImpl:128 [ERROR] : No operations allowed after connection closed.
+2021-09-19 21:21:11,168 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "role" is null
+2021-09-19 21:21:44,746 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:21:44,752 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:21:45,615 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:21:46,896 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 21:21:46,929 com.lt.dao.UserDaoImpl:128 [ERROR] : No operations allowed after connection closed.
+2021-09-19 21:21:46,932 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "role" is null
+2021-09-19 21:23:21,506 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:23:21,511 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:23:23,292 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:23:24,725 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 21:23:24,744 com.lt.dao.UserDaoImpl:128 [ERROR] : No operations allowed after connection closed.
+2021-09-19 21:23:24,746 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "role" is null
+2021-09-19 21:24:41,712 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:24:41,718 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:24:43,143 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:24:49,778 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 21:24:49,810 com.lt.dao.UserDaoImpl:128 [ERROR] : No operations allowed after connection closed.
+2021-09-19 21:24:49,812 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "role" is null
+2021-09-19 21:24:57,521 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:24:57,527 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:24:58,239 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:24:59,485 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 21:24:59,508 com.lt.dao.UserDaoImpl:128 [ERROR] : No operations allowed after connection closed.
+2021-09-19 21:24:59,510 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "role" is null
+2021-09-19 21:25:10,866 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:25:10,873 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:25:11,729 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:25:13,137 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 21:25:26,178 com.lt.dao.UserDaoImpl:128 [ERROR] : No operations allowed after connection closed.
+2021-09-19 21:25:44,702 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "role" is null
+2021-09-19 21:25:49,778 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:25:49,815 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:25:51,822 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:25:53,222 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 21:27:35,587 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:27:35,596 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:27:36,407 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:27:37,868 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 21:27:37,895 com.lt.dao.UserDaoImpl:123 [ERROR] : No operations allowed after connection closed.
+2021-09-19 21:27:37,899 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "role" is null
+2021-09-19 21:28:02,832 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:28:02,837 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:28:03,745 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:28:05,112 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 21:28:05,135 com.lt.dao.StudentDaoImpl:90 [ERROR] : No operations allowed after connection closed.
+2021-09-19 21:28:05,137 com.lt.dao.StudentDaoImpl:112 [ERROR] : No operations allowed after connection closed.
+2021-09-19 21:28:11,075 com.lt.dao.UserDaoImpl:? [ERROR] : No operations allowed after connection closed.
+2021-09-19 21:28:11,082 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "role" is null
+2021-09-19 21:28:16,034 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:28:16,058 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:28:16,703 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:28:18,066 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 21:29:03,937 com.lt.dao.StudentDaoImpl:90 [ERROR] : No operations allowed after connection closed.
+2021-09-19 21:29:27,384 com.lt.dao.StudentDaoImpl:112 [ERROR] : No operations allowed after connection closed.
+2021-09-19 21:31:24,807 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:31:24,815 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:31:25,897 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:31:27,212 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 21:31:41,640 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:31:41,646 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:31:42,461 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:31:43,987 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.InputMismatchException
+2021-09-19 21:31:55,657 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:31:55,700 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:31:56,405 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:31:57,752 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 21:32:22,643 com.lt.dao.UserDaoImpl:118 [ERROR] : No operations allowed after connection closed.
+2021-09-19 21:32:22,671 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "role" is null
+2021-09-19 21:32:32,888 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:32:32,894 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:32:33,613 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:32:35,120 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 21:32:43,176 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:32:43,204 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:32:43,832 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:32:45,857 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 21:33:54,865 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:33:54,883 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:33:55,581 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:33:57,223 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 21:34:32,296 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:34:32,301 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:34:33,105 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:34:34,453 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 21:35:34,020 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 21:35:34,059 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 21:35:34,733 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 21:35:36,933 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 22:00:10,423 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 22:00:10,488 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 22:00:14,936 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 22:00:14,940 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 22:00:16,156 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 22:00:18,059 com.lt.client.CRSApplication:128 [INFO] : Hello sa
+2021-09-19 22:00:18,965 com.lt.dao.RegisteredCoursesDaoImpl:412 [INFO] : Unknown column 'isRegistered' in 'field list'
+2021-09-19 22:00:19,048 com.lt.client.CRSStudent:37 [INFO] : *****************************
+2021-09-19 22:00:19,049 com.lt.client.CRSStudent:38 [INFO] : **********Student Menu*********
+2021-09-19 22:00:19,052 com.lt.client.CRSStudent:39 [INFO] : *****************************
+2021-09-19 22:00:19,055 com.lt.client.CRSStudent:40 [INFO] : 1. Course Registration
+2021-09-19 22:00:19,056 com.lt.client.CRSStudent:41 [INFO] : 2. Add Course
+2021-09-19 22:00:19,057 com.lt.client.CRSStudent:42 [INFO] : 3. Drop Course
+2021-09-19 22:00:19,057 com.lt.client.CRSStudent:43 [INFO] : 4. View Course
+2021-09-19 22:00:19,058 com.lt.client.CRSStudent:44 [INFO] : 5. View Registered Courses
+2021-09-19 22:00:19,058 com.lt.client.CRSStudent:45 [INFO] : 6. View grade card
+2021-09-19 22:00:19,059 com.lt.client.CRSStudent:46 [INFO] : 7. Make Payment
+2021-09-19 22:00:19,061 com.lt.client.CRSStudent:47 [INFO] : 8. Logout
+2021-09-19 22:00:19,064 com.lt.client.CRSStudent:48 [INFO] : *****************************
+2021-09-19 22:00:21,870 com.lt.dao.RegisteredCoursesDaoImpl:336 [ERROR] : No operations allowed after connection closed.
+2021-09-19 22:00:21,876 com.lt.client.CRSStudent:265 [INFO] : NO COURSE AVAILABLE
+2021-09-19 22:00:21,876 com.lt.client.CRSStudent:37 [INFO] : *****************************
+2021-09-19 22:00:21,876 com.lt.client.CRSStudent:38 [INFO] : **********Student Menu*********
+2021-09-19 22:00:21,879 com.lt.client.CRSStudent:39 [INFO] : *****************************
+2021-09-19 22:00:21,879 com.lt.client.CRSStudent:40 [INFO] : 1. Course Registration
+2021-09-19 22:00:21,880 com.lt.client.CRSStudent:41 [INFO] : 2. Add Course
+2021-09-19 22:00:21,880 com.lt.client.CRSStudent:42 [INFO] : 3. Drop Course
+2021-09-19 22:00:21,880 com.lt.client.CRSStudent:43 [INFO] : 4. View Course
+2021-09-19 22:00:21,881 com.lt.client.CRSStudent:44 [INFO] : 5. View Registered Courses
+2021-09-19 22:00:21,881 com.lt.client.CRSStudent:45 [INFO] : 6. View grade card
+2021-09-19 22:00:21,881 com.lt.client.CRSStudent:46 [INFO] : 7. Make Payment
+2021-09-19 22:00:21,881 com.lt.client.CRSStudent:47 [INFO] : 8. Logout
+2021-09-19 22:00:21,882 com.lt.client.CRSStudent:48 [INFO] : *****************************
+2021-09-19 22:00:23,834 com.lt.client.CRSStudent:181 [INFO] : Please complete registration
+2021-09-19 22:00:23,837 com.lt.client.CRSStudent:37 [INFO] : *****************************
+2021-09-19 22:00:23,837 com.lt.client.CRSStudent:38 [INFO] : **********Student Menu*********
+2021-09-19 22:00:23,837 com.lt.client.CRSStudent:39 [INFO] : *****************************
+2021-09-19 22:00:23,838 com.lt.client.CRSStudent:40 [INFO] : 1. Course Registration
+2021-09-19 22:00:23,839 com.lt.client.CRSStudent:41 [INFO] : 2. Add Course
+2021-09-19 22:00:23,839 com.lt.client.CRSStudent:42 [INFO] : 3. Drop Course
+2021-09-19 22:00:23,839 com.lt.client.CRSStudent:43 [INFO] : 4. View Course
+2021-09-19 22:00:23,840 com.lt.client.CRSStudent:44 [INFO] : 5. View Registered Courses
+2021-09-19 22:00:23,840 com.lt.client.CRSStudent:45 [INFO] : 6. View grade card
+2021-09-19 22:00:23,841 com.lt.client.CRSStudent:46 [INFO] : 7. Make Payment
+2021-09-19 22:00:23,841 com.lt.client.CRSStudent:47 [INFO] : 8. Logout
+2021-09-19 22:00:23,841 com.lt.client.CRSStudent:48 [INFO] : *****************************
+2021-09-19 22:00:24,817 com.lt.client.CRSStudent:239 [INFO] : Please complete registration
+2021-09-19 22:00:24,818 com.lt.client.CRSStudent:37 [INFO] : *****************************
+2021-09-19 22:00:24,819 com.lt.client.CRSStudent:38 [INFO] : **********Student Menu*********
+2021-09-19 22:00:24,819 com.lt.client.CRSStudent:39 [INFO] : *****************************
+2021-09-19 22:00:24,823 com.lt.client.CRSStudent:40 [INFO] : 1. Course Registration
+2021-09-19 22:00:24,825 com.lt.client.CRSStudent:41 [INFO] : 2. Add Course
+2021-09-19 22:00:24,826 com.lt.client.CRSStudent:42 [INFO] : 3. Drop Course
+2021-09-19 22:00:24,827 com.lt.client.CRSStudent:43 [INFO] : 4. View Course
+2021-09-19 22:00:24,827 com.lt.client.CRSStudent:44 [INFO] : 5. View Registered Courses
+2021-09-19 22:00:24,827 com.lt.client.CRSStudent:45 [INFO] : 6. View grade card
+2021-09-19 22:00:24,828 com.lt.client.CRSStudent:46 [INFO] : 7. Make Payment
+2021-09-19 22:00:24,828 com.lt.client.CRSStudent:47 [INFO] : 8. Logout
+2021-09-19 22:00:24,828 com.lt.client.CRSStudent:48 [INFO] : *****************************
+2021-09-19 22:00:25,571 com.lt.dao.RegisteredCoursesDaoImpl:336 [ERROR] : No operations allowed after connection closed.
+2021-09-19 22:00:25,572 com.lt.client.CRSStudent:265 [INFO] : NO COURSE AVAILABLE
+2021-09-19 22:00:25,572 com.lt.client.CRSStudent:37 [INFO] : *****************************
+2021-09-19 22:00:25,572 com.lt.client.CRSStudent:38 [INFO] : **********Student Menu*********
+2021-09-19 22:00:25,577 com.lt.client.CRSStudent:39 [INFO] : *****************************
+2021-09-19 22:00:25,578 com.lt.client.CRSStudent:40 [INFO] : 1. Course Registration
+2021-09-19 22:00:25,578 com.lt.client.CRSStudent:41 [INFO] : 2. Add Course
+2021-09-19 22:00:25,578 com.lt.client.CRSStudent:42 [INFO] : 3. Drop Course
+2021-09-19 22:00:25,578 com.lt.client.CRSStudent:43 [INFO] : 4. View Course
+2021-09-19 22:00:25,579 com.lt.client.CRSStudent:44 [INFO] : 5. View Registered Courses
+2021-09-19 22:00:25,579 com.lt.client.CRSStudent:45 [INFO] : 6. View grade card
+2021-09-19 22:00:25,579 com.lt.client.CRSStudent:46 [INFO] : 7. Make Payment
+2021-09-19 22:00:25,579 com.lt.client.CRSStudent:47 [INFO] : 8. Logout
+2021-09-19 22:00:25,580 com.lt.client.CRSStudent:48 [INFO] : *****************************
+2021-09-19 22:00:26,186 com.lt.dao.RegisteredCoursesDaoImpl:378 [INFO] : No operations allowed after connection closed.
+2021-09-19 22:00:26,187 com.lt.client.CRSStudent:300 [INFO] : You haven't registered for any course
+2021-09-19 22:00:26,188 com.lt.client.CRSStudent:37 [INFO] : *****************************
+2021-09-19 22:00:26,188 com.lt.client.CRSStudent:38 [INFO] : **********Student Menu*********
+2021-09-19 22:00:26,188 com.lt.client.CRSStudent:39 [INFO] : *****************************
+2021-09-19 22:00:26,189 com.lt.client.CRSStudent:40 [INFO] : 1. Course Registration
+2021-09-19 22:00:26,189 com.lt.client.CRSStudent:41 [INFO] : 2. Add Course
+2021-09-19 22:00:26,189 com.lt.client.CRSStudent:42 [INFO] : 3. Drop Course
+2021-09-19 22:00:26,191 com.lt.client.CRSStudent:43 [INFO] : 4. View Course
+2021-09-19 22:00:26,192 com.lt.client.CRSStudent:44 [INFO] : 5. View Registered Courses
+2021-09-19 22:00:26,192 com.lt.client.CRSStudent:45 [INFO] : 6. View grade card
+2021-09-19 22:00:26,192 com.lt.client.CRSStudent:46 [INFO] : 7. Make Payment
+2021-09-19 22:00:26,192 com.lt.client.CRSStudent:47 [INFO] : 8. Logout
+2021-09-19 22:00:26,192 com.lt.client.CRSStudent:48 [INFO] : *****************************
+2021-09-19 22:00:28,590 com.lt.client.CRSStudent:87 [WARN] : ***** Wrong Choice *****
+2021-09-19 22:00:28,591 com.lt.client.CRSStudent:37 [INFO] : *****************************
+2021-09-19 22:00:28,591 com.lt.client.CRSStudent:38 [INFO] : **********Student Menu*********
+2021-09-19 22:00:28,592 com.lt.client.CRSStudent:39 [INFO] : *****************************
+2021-09-19 22:00:28,592 com.lt.client.CRSStudent:40 [INFO] : 1. Course Registration
+2021-09-19 22:00:28,592 com.lt.client.CRSStudent:41 [INFO] : 2. Add Course
+2021-09-19 22:00:28,592 com.lt.client.CRSStudent:42 [INFO] : 3. Drop Course
+2021-09-19 22:00:28,592 com.lt.client.CRSStudent:43 [INFO] : 4. View Course
+2021-09-19 22:00:28,593 com.lt.client.CRSStudent:44 [INFO] : 5. View Registered Courses
+2021-09-19 22:00:28,593 com.lt.client.CRSStudent:45 [INFO] : 6. View grade card
+2021-09-19 22:00:28,593 com.lt.client.CRSStudent:46 [INFO] : 7. Make Payment
+2021-09-19 22:00:28,593 com.lt.client.CRSStudent:47 [INFO] : 8. Logout
+2021-09-19 22:00:28,594 com.lt.client.CRSStudent:48 [INFO] : *****************************
+2021-09-19 22:00:43,604 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 22:00:43,610 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 22:00:57,452 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 22:01:19,644 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-19 22:01:33,045 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 22:01:33,052 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 22:01:37,905 com.lt.client.CRSApplication:122 [INFO] : Password:
+2021-09-19 22:02:48,017 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-19 22:02:58,124 com.lt.client.CRSApplication:119 [INFO] : -----------------Login------------------
+2021-09-19 22:02:58,129 com.lt.client.CRSApplication:120 [INFO] : Email:
+2021-09-19 22:03:58,656 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-19 22:05:00,039 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 06:13:36,313 com.lt.dao.UserDaoImpl:79 [INFO] : Something went wrong, please try again! No operations allowed after connection closed.
+2021-09-20 06:14:52,893 com.lt.dao.RegisteredCoursesDaoImpl:412 [INFO] : Unknown column 'isRegistered' in 'field list'
+2021-09-20 06:14:52,904 com.lt.client.CRSStudent:37 [INFO] : *****************************
+2021-09-20 06:14:52,905 com.lt.client.CRSStudent:38 [INFO] : **********Student Menu*********
+2021-09-20 06:14:52,906 com.lt.client.CRSStudent:39 [INFO] : *****************************
+2021-09-20 06:14:52,907 com.lt.client.CRSStudent:40 [INFO] : 1. Course Registration
+2021-09-20 06:14:52,911 com.lt.client.CRSStudent:41 [INFO] : 2. Add Course
+2021-09-20 06:14:52,912 com.lt.client.CRSStudent:42 [INFO] : 3. Drop Course
+2021-09-20 06:14:52,917 com.lt.client.CRSStudent:43 [INFO] : 4. View Course
+2021-09-20 06:14:52,919 com.lt.client.CRSStudent:44 [INFO] : 5. View Registered Courses
+2021-09-20 06:14:52,921 com.lt.client.CRSStudent:45 [INFO] : 6. View grade card
+2021-09-20 06:14:52,922 com.lt.client.CRSStudent:46 [INFO] : 7. Make Payment
+2021-09-20 06:14:52,923 com.lt.client.CRSStudent:47 [INFO] : 8. Logout
+2021-09-20 06:14:52,925 com.lt.client.CRSStudent:48 [INFO] : *****************************
+2021-09-20 06:16:36,302 com.lt.dao.RegisteredCoursesDaoImpl:412 [INFO] : Unknown column 'isRegistered' in 'field list'
+2021-09-20 06:27:28,835 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.lang.NullPointerException: Cannot invoke "java.util.List.size()" because "courseList" is null
+2021-09-20 06:30:43,953 com.lt.dao.AdminDaoImpl:283 [INFO] : 3 courses in table
+2021-09-20 06:30:48,815 com.lt.dao.AdminDaoImpl:283 [INFO] : 3 courses in table
+2021-09-20 06:31:09,130 com.lt.dao.AdminDaoImpl:76 [ERROR] : Table 'crs_db.course' doesn't exist
+2021-09-20 06:31:09,135 com.lt.client.CRSAdmin:222 [ERROR] : Course with courseCode: CS04 already present in catalog.
+2021-09-20 06:32:52,643 com.lt.dao.AdminDaoImpl:283 [INFO] : 3 courses in table
+2021-09-20 06:33:19,804 com.lt.dao.AdminDaoImpl:76 [ERROR] : Unknown column 'catalogId' in 'field list'
+2021-09-20 06:33:19,808 com.lt.client.CRSAdmin:222 [ERROR] : Course with courseCode: CS04 already present in catalog.
+2021-09-20 06:35:35,213 com.lt.dao.AdminDaoImpl:283 [INFO] : 3 courses in table
+2021-09-20 06:35:47,495 com.lt.dao.AdminDaoImpl:66 [INFO] : 1 course added
+2021-09-20 06:35:47,496 com.lt.dao.AdminDaoImpl:72 [INFO] : Course with courseCode: CS04 is added to catalog.
+2021-09-20 06:35:47,499 com.lt.client.CRSAdmin:222 [ERROR] : Course with courseCode: CS04 already present in catalog.
+2021-09-20 06:35:50,911 com.lt.dao.AdminDaoImpl:283 [INFO] : 4 courses in table
+2021-09-20 06:35:56,437 com.lt.dao.AdminDaoImpl:283 [INFO] : 4 courses in table
+2021-09-20 06:35:56,446 com.lt.dao.AdminDaoImpl:34 [INFO] : 0 entries deleted.
+2021-09-20 06:35:56,447 com.lt.dao.AdminDaoImpl:36 [ERROR] :  not in catalog!
+2021-09-20 06:35:56,449 com.lt.client.CRSAdmin:194 [ERROR] : Course with courseCode:  can not be deleted.
+2021-09-20 06:36:31,741 com.lt.dao.AdminDaoImpl:283 [INFO] : 4 courses in table
+2021-09-20 06:36:31,776 com.lt.dao.AdminDaoImpl:34 [INFO] : 0 entries deleted.
+2021-09-20 06:36:31,777 com.lt.dao.AdminDaoImpl:36 [ERROR] :  not in catalog!
+2021-09-20 06:36:31,780 com.lt.client.CRSAdmin:194 [ERROR] : Course with courseCode:  can not be deleted.
+2021-09-20 06:37:32,101 com.lt.dao.AdminDaoImpl:283 [INFO] : 4 courses in table
+2021-09-20 06:38:06,548 com.lt.dao.AdminDaoImpl:34 [INFO] : 0 entries deleted.
+2021-09-20 06:38:06,561 com.lt.dao.AdminDaoImpl:36 [ERROR] :  not in catalog!
+2021-09-20 06:38:06,597 com.lt.client.CRSAdmin:194 [ERROR] : Course with courseCode:  can not be deleted.
+2021-09-20 06:38:06,608 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.InputMismatchException
+2021-09-20 06:38:28,015 com.lt.dao.AdminDaoImpl:283 [INFO] : 4 courses in table
+2021-09-20 06:38:28,042 com.lt.dao.AdminDaoImpl:34 [INFO] : 0 entries deleted.
+2021-09-20 06:38:28,043 com.lt.dao.AdminDaoImpl:36 [ERROR] :  not in catalog!
+2021-09-20 06:38:28,045 com.lt.client.CRSAdmin:194 [ERROR] : Course with courseCode:  can not be deleted.
+2021-09-20 06:38:53,624 com.lt.dao.AdminDaoImpl:283 [INFO] : 4 courses in table
+2021-09-20 06:38:58,582 com.lt.dao.AdminDaoImpl:34 [INFO] : 1 entries deleted.
+2021-09-20 06:38:58,584 com.lt.dao.AdminDaoImpl:40 [INFO] : Course with courseCode: CS04 deleted.
+2021-09-20 06:38:58,585 com.lt.client.CRSAdmin:194 [ERROR] : Course with courseCode: CS04 can not be deleted.
+2021-09-20 06:39:02,294 com.lt.dao.AdminDaoImpl:283 [INFO] : 3 courses in table
+2021-09-20 06:39:04,297 com.lt.dao.AdminDaoImpl:283 [INFO] : 3 courses in table
+2021-09-20 06:39:18,813 com.lt.dao.AdminDaoImpl:76 [ERROR] : Cannot add or update a child row: a foreign key constraint fails (`crs_db/crs_course`, CONSTRAINT `professorIdFk` FOREIGN KEY (`professorId`) REFERENCES `crs_professor` (`userId`))
+2021-09-20 06:39:18,816 com.lt.client.CRSAdmin:222 [ERROR] : Course with courseCode: CS04 already present in catalog.
+2021-09-20 06:40:01,354 com.lt.dao.AdminDaoImpl:283 [INFO] : 3 courses in table
+2021-09-20 06:40:13,071 com.lt.dao.AdminDaoImpl:66 [INFO] : 1 course added
+2021-09-20 06:40:13,072 com.lt.dao.AdminDaoImpl:72 [INFO] : Course with courseCode: CS04 is added to catalog.
+2021-09-20 06:40:13,073 com.lt.client.CRSAdmin:222 [ERROR] : Course with courseCode: CS04 already present in catalog.
+2021-09-20 06:40:16,685 com.lt.dao.AdminDaoImpl:114 [ERROR] : Table 'crs_db.user' doesn't exist
+2021-09-20 06:41:32,719 com.lt.dao.AdminDaoImpl:114 [ERROR] : Unknown column 'country' in 'field list'
+2021-09-20 06:43:04,019 com.lt.dao.AdminDaoImpl:109 [INFO] : 3 students have pending-approval.
+2021-09-20 06:44:17,792 com.lt.dao.AdminDaoImpl:109 [INFO] : 3 students have pending-approval.
+2021-09-20 06:45:01,619 com.lt.dao.AdminDaoImpl:109 [INFO] : 0 students have pending-approval.
+2021-09-20 06:45:31,046 com.lt.dao.AdminDaoImpl:109 [INFO] : 0 students have pending-approval.
+2021-09-20 06:46:48,349 com.lt.dao.AdminDaoImpl:109 [INFO] : 1 students have pending-approval.
+2021-09-20 06:47:59,280 com.lt.dao.AdminDaoImpl:109 [INFO] : 1 students have pending-approval.
+2021-09-20 06:48:56,680 com.lt.dao.AdminDaoImpl:109 [INFO] : 1 students have pending-approval.
+2021-09-20 06:50:07,559 com.lt.dao.AdminDaoImpl:109 [INFO] : 1 students have pending-approval.
+2021-09-20 06:50:44,990 com.lt.dao.AdminDaoImpl:109 [INFO] : 1 students have pending-approval.
+2021-09-20 06:52:10,289 com.lt.dao.AdminDaoImpl:109 [INFO] : 1 students have pending-approval.
+2021-09-20 06:52:12,188 com.lt.dao.AdminDaoImpl:132 [INFO] : 1 student approved.
+2021-09-20 06:52:16,481 com.lt.dao.AdminDaoImpl:109 [INFO] : 0 students have pending-approval.
+2021-09-20 06:53:57,901 com.lt.dao.AdminDaoImpl:176 [ERROR] : Parameter index out of range (7 > number of parameters, which is 6).
+2021-09-20 06:53:57,909 com.lt.dao.AdminDaoImpl:197 [ERROR] : userId: prof1 is already in use.
+2021-09-20 06:53:57,913 com.lt.client.CRSAdmin:127 [ERROR] : professorId: Santhosh not added!
+2021-09-20 06:55:32,929 com.lt.dao.AdminDaoImpl:165 [INFO] : 1 user added.
+2021-09-20 06:55:32,934 com.lt.dao.AdminDaoImpl:171 [INFO] : User with userId: Santhosh added.
+2021-09-20 06:55:33,071 com.lt.dao.AdminDaoImpl:213 [INFO] : 1 professor added.
+2021-09-20 06:55:33,073 com.lt.dao.AdminDaoImpl:219 [INFO] : Professor with professorId: Santhosh added.
+2021-09-20 06:55:33,074 com.lt.client.CRSAdmin:127 [ERROR] : professorId: S not added!
+2021-09-20 06:58:15,142 com.lt.dao.AdminDaoImpl:165 [INFO] : 1 user added.
+2021-09-20 06:58:15,148 com.lt.dao.AdminDaoImpl:171 [INFO] : User with userId: d added.
+2021-09-20 06:58:15,197 com.lt.dao.AdminDaoImpl:213 [INFO] : 1 professor added.
+2021-09-20 06:58:15,199 com.lt.dao.AdminDaoImpl:219 [INFO] : Professor with professorId: d added.
+2021-09-20 06:58:15,212 com.lt.client.CRSAdmin:127 [ERROR] : professorId: d not added!
+2021-09-20 06:58:50,818 com.lt.dao.AdminDaoImpl:326 [ERROR] : Table 'crs_db.user' doesn't exist
+2021-09-20 06:59:26,164 com.lt.dao.AdminDaoImpl:326 [ERROR] : Unknown column 'country' in 'field list'
+2021-09-20 06:59:52,686 com.lt.dao.AdminDaoImpl:322 [INFO] : 0 professors in the institute.
+2021-09-20 07:17:51,959 com.lt.dao.AdminDaoImpl:326 [ERROR] : Column Index out of range, 7 > 6. 
+2021-09-20 07:18:29,149 com.lt.dao.AdminDaoImpl:321 [INFO] : 3 professors in the institute.
+2021-09-20 07:20:52,240 com.lt.dao.ProfessorDaoImpl:41 [ERROR] : No operations allowed after connection closed.
+2021-09-20 07:20:52,249 com.lt.dao.ProfessorDaoImpl:72 [ERROR] : No operations allowed after connection closed.
+2021-09-20 07:25:38,939 com.lt.dao.ProfessorDaoImpl:41 [ERROR] : No operations allowed after connection closed.
+2021-09-20 07:28:07,094 com.lt.dao.ProfessorDaoImpl:67 [ERROR] : Table 'crs_db.crs_registeredcourse' doesn't exist
+2021-09-20 07:29:51,935 com.lt.dao.ProfessorDaoImpl:67 [ERROR] : Unknown column 'course.courseCode' in 'field list'
+2021-09-20 07:30:55,703 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:31:31,421 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:31:55,081 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:31:55,185 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:31:55,279 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:31:55,308 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:31:55,390 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:31:55,419 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:31:55,475 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:31:55,542 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:31:55,590 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:31:55,641 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:31:55,643 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException: No line found
+2021-09-20 07:31:55,687 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:31:55,730 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:31:55,774 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:31:55,819 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:31:55,863 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:31:55,907 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:31:55,955 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:31:55,996 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:31:56,075 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:31:56,114 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:31:56,154 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:31:56,191 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:31:56,232 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.NoSuchElementException
+2021-09-20 07:34:21,357 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.InputMismatchException
+2021-09-20 07:34:37,535 com.lt.dao.ProfessorDaoImpl:67 [ERROR] : Unknown column 'course.courseCode' in 'field list'
+2021-09-20 07:36:28,370 com.lt.dao.ProfessorDaoImpl:67 [ERROR] : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'a join crs_registeredcourses b on a.courseCode = b.courseCode where a.professorI' at line 1
+2021-09-20 07:42:39,581 com.lt.dao.ProfessorDaoImpl:67 [ERROR] : No operations allowed after connection closed.
+2021-09-20 07:42:39,588 com.lt.dao.ProfessorDaoImpl:41 [ERROR] : No operations allowed after connection closed.
+2021-09-20 07:43:05,185 com.lt.dao.ProfessorDaoImpl:41 [ERROR] : No operations allowed after connection closed.
+2021-09-20 07:46:53,072 com.lt.client.CRSAdmin:68 [WARN] : ***** Wrong Choice *****
+2021-09-20 07:46:58,550 com.lt.client.CRSAdmin:68 [WARN] : ***** Wrong Choice *****
+2021-09-20 07:47:49,434 com.lt.dao.RegisteredCoursesDaoImpl:336 [ERROR] : No operations allowed after connection closed.
+2021-09-20 07:49:55,499 com.lt.dao.RegisteredCoursesDaoImpl:336 [ERROR] : Table 'crs_db.registeredcourses' doesn't exist
+2021-09-20 07:57:44,495 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.MissingFormatArgumentException: Format specifier '%-20s'
+2021-09-20 07:58:19,946 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.MissingFormatArgumentException: Format specifier '%-20s'
+2021-09-20 08:00:17,734 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.MissingFormatArgumentException: Format specifier '%-20s'
+2021-09-20 08:00:26,675 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.MissingFormatArgumentException: Format specifier '%-20s'
+2021-09-20 08:00:39,817 com.lt.client.CRSApplication:50 [ERROR] : CRSAPPLICATION : java.util.MissingFormatArgumentException: Format specifier '%-20s'
+2021-09-20 08:01:12,831 com.lt.dao.RegisteredCoursesDaoImpl:48 [INFO] : Table 'crs_db.course' doesn't exist
+2021-09-20 08:01:12,843 com.lt.dao.RegisteredCoursesDaoImpl:335 [ERROR] : No operations allowed after connection closed.
+2021-09-20 08:03:02,340 com.lt.dao.RegisteredCoursesDaoImpl:335 [ERROR] : No operations allowed after connection closed.
+2021-09-20 08:04:39,778 com.lt.client.CRSStudent:87 [WARN] : ***** Wrong Choice *****
+2021-09-20 08:04:51,140 com.lt.dao.RegisteredCoursesDaoImpl:291 [INFO] : Unknown column 'course.courseCode' in 'field list'
+2021-09-20 08:16:51,561 com.lt.dao.RegisteredCoursesDaoImpl:374 [INFO] : Table 'crs_db.registeredcourses' doesn't exist
+2021-09-20 08:17:51,457 com.lt.dao.RegisteredCoursesDaoImpl:374 [INFO] : Column 'courseDesx' not found.
+2021-09-20 08:19:49,305 com.lt.dao.RegisteredCoursesDaoImpl:291 [INFO] : Unknown column 'course.courseCode' in 'field list'
+2021-09-20 08:21:07,631 com.lt.dao.RegisteredCoursesDaoImpl:247 [ERROR] : 1054
+2021-09-20 08:21:07,636 com.lt.dao.RegisteredCoursesDaoImpl:248 [INFO] : Unknown column 'courseFee' in 'field list'
+2021-09-20 08:57:20,816 com.lt.business.NotificationOperation:39 [ERROR] : Error occured Table 'crs_db.payment' doesn't exist
+2021-09-20 09:01:17,727 com.lt.business.NotificationOperation:39 [ERROR] : Error occured Unknown column 'amount' in 'field list'
+2021-09-20 09:02:31,311 com.lt.business.NotificationOperation:39 [ERROR] : Error occured Parameter index out of range (5 > number of parameters, which is 4).
+2021-09-20 09:03:26,208 com.lt.business.NotificationOperation:39 [ERROR] : Error occured Unknown column 'methodOfPayment' in 'field list'
+2021-09-20 09:04:14,810 com.lt.business.NotificationOperation:39 [ERROR] : Error occured Data truncation: Data too long for column 'paymentMethod' at row 1
+2021-09-20 09:04:48,274 com.lt.dao.NotificationDaoImpl:40 [INFO] : Payment successful, Reference ID: fea18246-8525-41f8-bfa7-a5ce75ed90eb
+2021-09-20 09:04:48,301 com.lt.business.NotificationOperation:39 [ERROR] : Error occured Unknown column 'type' in 'field list'
+2021-09-20 09:07:57,229 com.lt.dao.NotificationDaoImpl:40 [INFO] : Payment successful, Reference ID: 4d538385-6635-47e1-9976-c99d299b383c
+2021-09-20 09:07:57,264 com.lt.business.NotificationOperation:39 [ERROR] : Error occured Data truncated for column 'referenceId' at row 1
+2021-09-20 09:09:03,102 com.lt.dao.NotificationDaoImpl:40 [INFO] : Payment successful, Reference ID: e20d4032-0060-4e6c-82c6-b012260bac6c
+2021-09-20 09:09:03,128 com.lt.business.NotificationOperation:39 [ERROR] : Error occured Incorrect integer value: 'e20d4032-0060-4e6c-82c6-b012260bac6c' for column 'referenceId' at row 1
+2021-09-20 09:10:24,303 com.lt.dao.NotificationDaoImpl:40 [INFO] : Payment successful, Reference ID: 0c623391-6626-4e6d-9583-9a061542a528
+2021-09-20 09:12:19,236 com.lt.business.NotificationOperation:39 [ERROR] : Error occured Data truncated for column 'referenceId' at row 1
+2021-09-20 09:13:10,080 com.lt.dao.NotificationDaoImpl:40 [INFO] : Payment successful, Reference ID: 7b66d27c-56af-4463-a6a8-50afa6fe9a36
+2021-09-20 09:13:10,112 com.lt.business.NotificationOperation:39 [ERROR] : Error occured Data truncated for column 'referenceId' at row 1
+2021-09-20 09:14:49,631 com.lt.dao.NotificationDaoImpl:40 [INFO] : Payment successful, Reference ID: c0f1d3dc-72db-4248-93c8-3dd4a7200f33
+2021-09-20 09:14:49,663 com.lt.dao.NotificationDaoImpl:60 [INFO] : Student with id 1010 fee has been paid
+2021-09-20 09:16:26,707 com.lt.dao.NotificationDaoImpl:40 [INFO] : Payment successful, Reference ID: 8fec89e9-c9a2-47c6-80b1-f71443cf22fa
+2021-09-20 09:16:26,746 com.lt.dao.NotificationDaoImpl:60 [INFO] : Student with id 1010 fee has been paid
+2021-09-20 09:17:27,932 com.lt.dao.NotificationDaoImpl:40 [INFO] : Payment successful, Reference ID: 7e7494c4-73e5-42b1-9376-cfec3a081504
+2021-09-20 09:17:27,973 com.lt.dao.NotificationDaoImpl:60 [INFO] : Student with id 1010 fee has been paid
+2021-09-20 09:19:19,261 com.lt.business.NotificationOperation:39 [ERROR] : Error occured Data truncation: Data too long for column 'referenceId' at row 1
+2021-09-20 09:20:32,861 com.lt.dao.NotificationDaoImpl:40 [INFO] : Payment successful, Reference ID: d8a00b7d-35aa-4329-aaa0-cb60acaa487e
+2021-09-20 09:20:32,893 com.lt.dao.NotificationDaoImpl:60 [INFO] : Student with id 1010 fee has been paid
+2021-09-20 09:22:49,872 com.lt.dao.NotificationDaoImpl:40 [INFO] : Payment successful, Reference ID: b5c6f59a-3cc0-4511-a11e-27d6020c8345
+2021-09-20 09:22:49,905 com.lt.dao.NotificationDaoImpl:60 [INFO] : Student with id 1010 fee has been paid
