@@ -86,12 +86,7 @@ public class ProfessorDaoImpl implements ProfessorDao {
 		return enrolledStudents;
 	}
 	
-	/**
-	 * Method to Grade a student using SQL Commands
-	 * @param: profId: professor id 
-	 * @param: courseCode: course code for the corresponding 
-	 * @return: returns the status after adding the grade
-	 */
+	
 	public Boolean addGrade(int studentId,String courseCode,String grade) {
 		Connection connection=DBUtils.getConnection();
 		try {
