@@ -13,9 +13,25 @@ import com.lt.utils.DBUtils;
 
 public class AdminDaoImpl implements AdminDao{
 
-
+	private static AdminDaoImpl adminDaoImpl =null;
+	
 	private static Logger logger = Logger.getLogger(AdminDaoImpl.class);
 	private PreparedStatement statement = null;
+	
+	//public Constructor for AdminDaoImpl
+	public AdminDaoImpl(){
+		logger.info("AdminDaoImpl Instance Created");
+	}
+	
+	//Singleton Implementation Method
+	public static AdminDaoImpl getInstance(){
+		if(adminDaoImpl==null){
+			synchronized (AdminDaoImpl.class){
+				adminDaoImpl = new AdminDaoImpl();
+			}
+		}
+		return adminDaoImpl;
+	}
 	
 
 	Connection connection = DBUtils.getConnection();

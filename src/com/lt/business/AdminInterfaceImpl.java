@@ -2,6 +2,8 @@ package com.lt.business;
 
 import java.util.*;
 
+import org.apache.log4j.Logger;
+
 import com.lt.bean.Course;
 import com.lt.bean.GradeCard;
 import com.lt.bean.Professor;
@@ -18,7 +20,25 @@ import com.lt.exceptions.UserIdAlreadyInUseException;
 
 public class AdminInterfaceImpl implements AdminInterface{
 	
+	private static AdminInterfaceImpl adminInterfaceImpl = null;
+	
 	AdminDaoImpl adminDaoImpl = new AdminDaoImpl();
+	private static Logger logger = Logger.getLogger(AdminDaoImpl.class);
+	
+	//public Constructor for AdminInterfaceImpl
+		public AdminInterfaceImpl(){
+			logger.info("AdminInterfaceImpl Instance Created");
+		}
+		
+		//Singleton Implementation Method
+		public static AdminInterfaceImpl getInstance(){
+			if(adminInterfaceImpl==null){
+				synchronized (AdminInterfaceImpl.class){
+					adminInterfaceImpl = new AdminInterfaceImpl();
+				}
+			}
+			return adminInterfaceImpl;
+		}
 	
 
 	public boolean addProfessor(Professor professor) {
