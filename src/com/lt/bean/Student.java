@@ -2,22 +2,15 @@ package com.lt.bean;
 
 public class Student extends User{
 	
-	public Student(){}
-	public Student(int id, String name, String department){
-		this.studentId = id;
-		this.studentName = name;
-		this.department = department;
-	}
-	private String studentName;
+	private String branchName;
 	private int studentId;
-	private String department;
-	private String password;
-	
-	public String getStudentName() {
-		return studentName;
+	private int batch;
+	private boolean isApproved;
+	public String getBranchName() {
+		return branchName;
 	}
-	public void setStudentName(String studentName) {
-		this.studentName = studentName;
+	public void setBranchName(String branchName) {
+		this.branchName = branchName;
 	}
 	public int getStudentId() {
 		return studentId;
@@ -25,17 +18,20 @@ public class Student extends User{
 	public void setStudentId(int studentId) {
 		this.studentId = studentId;
 	}
-	public String getDepartment() {
-		return department;
+	public int getBatch() {
+		return batch;
 	}
-	public void setDepartment(String department) {
-		this.department = department;
+	public void setBatch(int batch) {
+		this.batch = batch;
 	}
-	public String getPassword() {
-		return password;
+	public boolean isApproved() {
+		return isApproved;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setApproved(boolean isApproved) {
+		this.isApproved = isApproved;
 	}
+	
+	
+	
 	
 }

@@ -1,212 +1,330 @@
 package com.lt.dao;
 
 import java.util.*;
+
+import org.apache.log4j.Logger;
+
 import java.sql.*;
 import com.lt.bean.*;
-import com.lt.constants.Constants;
+import com.lt.client.CRSAdmin;
+import com.lt.constants.*;
+import com.lt.exceptions.*;
 import com.lt.utils.DBUtils;
 
 public class AdminDaoImpl implements AdminDao{
 
-	public HashMap<Integer, String> getLoginDetails() {
+
+	private static Logger logger = Logger.getLogger(AdminDaoImpl.class);
+	private PreparedStatement statement = null;
+	
+
+	Connection connection = DBUtils.getConnection();
+	
+
+	public boolean deleteCourse(String courseCode) throws CourseNotFoundException, CourseNotDeletedException{
 		
-		Connection con = null;
-		String sql = Constants.AdminLogin;
-		HashMap<Integer, String> adminDetails = new HashMap<Integer, String>();
+		statement = null;
 		try {
-			con = DBUtils.getConnection();
-			PreparedStatement ps = con.prepareStatement(sql);
-			ResultSet rs = ps.executeQuery();
-			while (rs.next()) {
-				adminDetails.put(rs.getInt(1),rs.getString(3));
+			String sql = Constants.DELETE_COURSE_QUERY;
+			statement = connection.prepareStatement(sql);
+			
+			statement.setString(1,courseCode);
+			int row = statement.executeUpdate();
+			
+			logger.info(row + " entries deleted.");
+			if(row == 0) {
+				logger.error(courseCode + " not in catalog!");
+				throw new CourseNotFoundException(courseCode);
 			}
 
-		} catch (SQLException e) {
-			System.err.println("Admin Login Error!");
+			logger.info("Course with courseCode: " + courseCode + " deleted.");
+			
+		}catch(SQLException se) {
+			
+			logger.error(se.getMessage());
+			throw new CourseNotDeletedException(courseCode);
 		}
-
-		return adminDetails;
+		return false;
+		
 	}
 
-	public List<Student> getStudentDetails() {
-		Connection con = null;
-		String sql = Constants.AdminGetStudentDetails;
-		List<Student> studentDetails = new ArrayList<Student>();
+	
+	public boolean addCourse(Course course) throws CourseFoundException{
+		
+		statement = null;
 		try {
-			con = DBUtils.getConnection();
-			PreparedStatement ps = con.prepareStatement(sql);
-			ResultSet rs = ps.executeQuery();
-			while (rs.next()) {
-				Student s = new Student();
-				s.setStudentId(rs.getInt(1));
-				s.setStudentName(rs.getString(2));
-				s.setDepartment(rs.getString(3));
-				studentDetails.add(s);
+			
+			String sql = Constants.ADD_COURSE_QUERY;
+			statement = connection.prepareStatement(sql);
+			
+			statement.setString(1, course.getCourseId());
+			statement.setString(2, course.getCourseName());
+			statement.setString(3, course.getCourseDescription());
+			statement.setString(4, course.getProfessorId());
+			int row = statement.executeUpdate();
+			
+			logger.info(row + " course added");
+			if(row == 0) {
+				logger.error("Course with courseCode: " + course.getCourseId() + "not added to catalog.");
+				throw new CourseFoundException(course.getCourseId());
+			}
+			
+			logger.info("Course with courseCode: " + course.getCourseId() + " is added to catalog."); 
+			
+		}catch(SQLException se) {
+			
+			logger.error(se.getMessage());
+			throw new CourseFoundException(course.getCourseId());
+			
+		}
+		return false;
+		
+	}
+
+	
+	public List<Student> viewPendingAdmissions() {
+		
+		statement = null;
+		List<Student> userList = new ArrayList<Student>();
+		try {
+			
+			String sql = Constants.VIEW_PENDING_ADMISSION_QUERY;
+			statement = connection.prepareStatement(sql);
+			ResultSet resultSet = statement.executeQuery();
+
+			while(resultSet.next()) {
+				
+				Student user = new Student();
+				user.setUserId(resultSet.getString(1));
+				user.setName(resultSet.getString(2));
+				user.setPassword(resultSet.getString(3));
+				user.setRole(Role.stringToName(resultSet.getString(4)));
+				user.setGender(Gender.stringToGender( resultSet.getString(5)));
+				user.setAddress(resultSet.getString(6));
+				user.setStudentId(resultSet.getInt(7));
+				userList.add(user);
+				
+			}
+			
+			logger.info(userList.size() + " students have pending-approval.");
+			
+		}catch(SQLException se) {
+			
+			logger.error(se.getMessage());
+			
+		}
+		
+		return userList;
+		
+	}
+
+	
+	public void approveStudent(int studentId) throws StudentNotFoundForApprovalException {
+		
+		statement = null;
+		try {
+			String sql = Constants.APPROVE_STUDENT_QUERY;
+			statement = connection.prepareStatement(sql);
+			
+			statement.setInt(1,studentId);
+			int row = statement.executeUpdate();
+			
+			logger.info(row + " student approved.");
+			if(row == 0) {
+				//logger.error("Student with studentId: " + studentId + " not found.");
+				throw new StudentNotFoundForApprovalException(studentId);
+			}
+			
+			//logger.info("Student with studentId: " + studentId + " approved by admin.");
+			
+		}catch(SQLException se) {
+			
+			logger.error(se.getMessage());
+			
+		}
+		
+	}
+
+	
+	public void addUser(User user) throws UserNotAddedException, UserIdAlreadyInUseException{
+		
+		statement = null;
+		try {
+			
+			String sql = Constants.ADD_USER_QUERY;
+			statement = connection.prepareStatement(sql);
+			
+			statement.setString(1, user.getUserId());
+			statement.setString(2, user.getName());
+			statement.setString(3, user.getPassword());
+			statement.setString(4, user.getRole().toString());
+			statement.setString(5, user.getGender().toString());
+			statement.setString(6, user.getAddress());
+			int row = statement.executeUpdate();
+			
+			logger.info(row + " user added.");
+			if(row == 0) {
+				logger.error("User with userId: " + user.getUserId() + " not added.");
+				throw new UserNotAddedException(user.getUserId()); 
 			}
 
-		} catch (SQLException e) {
-			System.err.println("Admin : Generate Grade Error!");
+			logger.info("User with userId: " + user.getUserId() + " added."); 
+			
+		}catch(SQLException se) {
+			
+			logger.error(se.getMessage());
+			throw new UserIdAlreadyInUseException(user.getUserId());
+			
 		}
-		return studentDetails;
+		
+	}
+
+	
+	public boolean addProfessor(Professor professor) throws UserIdAlreadyInUseException, ProfessorNotAddedException {
+		boolean flag = false;
+		try {
+			
+			this.addUser(professor);
+			
+		}catch (UserNotAddedException e) {
+			
+			logger.error(e.getMessage());
+			throw new ProfessorNotAddedException(professor.getUserId());
+			
+		}catch (UserIdAlreadyInUseException e) {
+			
+			logger.error(e.getMessage());
+			throw e;
+			
+		}
+		
+		
+		statement = null;
+		try {
+			
+			String sql = Constants.ADD_PROFESSOR_QUERY;
+			statement = connection.prepareStatement(sql);
+			
+			statement.setString(1, professor.getUserId());
+			statement.setString(2, professor.getDepartment());
+			statement.setString(3, professor.getDesignation());
+			int row = statement.executeUpdate();
+
+			logger.info(row + " professor added.");
+			if(row == 0) {
+				logger.error("Professor with professorId: " + professor.getUserId() + " not added.");
+				throw new ProfessorNotAddedException(professor.getUserId());
+			}else {
+				flag = true;
+				logger.info("Professor with professorId: " + professor.getUserId() + " added."); 
+			}
+			
+			
+		}catch(SQLException se) {
+			
+			logger.error(se.getMessage());
+			throw new UserIdAlreadyInUseException(professor.getUserId());
+			
+		}
+		return flag; 
+		
 	}
 	
-	public ArrayList<Course> showCourses(){
-		Connection con = null;
-		String sql = Constants.AdminShowCourses;
-		ArrayList<Course> courseDetails = new ArrayList<Course>();
+	
+	public void assignCourse(String courseCode, String professorId) throws CourseNotFoundException, UserNotFoundException{
+		
+		statement = null;
 		try {
-			con = DBUtils.getConnection();
-			PreparedStatement ps = con.prepareStatement(sql);
-			ResultSet rs = ps.executeQuery();
-			while (rs.next()) {
-				Course g = new Course();
-				g.setCourseId(rs.getString(2));
-				g.setCourseName(rs.getString(3));
-				g.setCourseDescription(rs.getString(4));
-				courseDetails.add(g);
+			String sql = Constants.ASSIGN_COURSE_QUERY;
+			statement = connection.prepareStatement(sql);
+			
+			statement.setString(1,professorId);
+			statement.setString(2,courseCode);
+			int row = statement.executeUpdate();
+			
+			logger.info(row + " course assigned.");
+			if(row == 0) {
+				logger.error(courseCode + " not found");
+				throw new CourseNotFoundException(courseCode);
 			}
-
-		} catch (SQLException e) {
-			System.err.println("Admin : Show Courses Error!");
+			
+			logger.info("Course with courseCode: " + courseCode + " is assigned to professor with professorId: " + professorId + ".");
+		
+		}catch(SQLException se) {
+			
+			logger.error(se.getMessage());
+			throw new UserNotFoundException(professorId);
+			
 		}
-		return courseDetails;	
+		
 	}
 	
-	public ArrayList<Professor> showProfessors(){
-		Connection con = null;
-		String sql = Constants.AdminShowProfessors;
-		ArrayList<Professor> professorDetails = new ArrayList<Professor>();
+	
+	public List<Course> viewCourses() {
+		
+		statement = null;
+		List<Course> courseList = new ArrayList<Course>();
 		try {
-			con = DBUtils.getConnection();
-			PreparedStatement ps = con.prepareStatement(sql);
-			ResultSet rs = ps.executeQuery();
-			while (rs.next()) {
-				Professor prof = new Professor();
-				prof.setProfessorId(rs.getInt(1));
-				prof.setProfessorName(rs.getString(2));
-				prof.setProfessorPassword(rs.getString(3));
-				prof.setProfessorDepartment(rs.getString(4));
-				professorDetails.add(prof);
+			
+			String sql = Constants.VIEW_COURSE_QUERY;
+			statement = connection.prepareStatement(sql);
+			ResultSet resultSet = statement.executeQuery();
+			
+			while(resultSet.next()) {
+				
+				Course course = new Course();
+				course.setCourseId(resultSet.getString(1));
+				course.setCourseName(resultSet.getString(2));
+				course.setProfessorId(resultSet.getString(3));
+				courseList.add(course);
+				
 			}
-
-		} catch (SQLException e) {
-			System.err.println("Admin : Show Professors Error!");
+			
+			logger.info(courseList.size() + " courses in table");
+			
+		}catch(SQLException se) {
+			
+			logger.error(se.getMessage());
+			
 		}
-		return professorDetails;	
+		
+		return courseList; 
+		
 	}
-	public boolean approveStudent(int studentId, String result){
-		Connection con = null;
-		PreparedStatement ps = null;
-		String sql = Constants.AdminApproveStudent;
-		boolean flag = false;
+	
+	
+	public List<Professor> viewProfessors() {
+		
+		statement = null;
+		List<Professor> professorList = new ArrayList<Professor>();
 		try {
-			con = DBUtils.getConnection();
-			ps = con.prepareStatement(sql);
-	        ps.setString(1,result);
-	        ps.setInt(2,studentId);
-			int rs = ps.executeUpdate();
-			if(rs>0) {flag = true;}
-		} catch (SQLException e) {
-			System.err.println("Admin : Add Professor Error!");
-			e.printStackTrace();
- 		}
-		return true;
-	}
-	public boolean addProfessorData(Professor professsor) {
-		Connection con = null;
-		PreparedStatement ps = null;
-		String sql = Constants.AdminAddProfessor;
-		boolean flag = false;
-		try {
-			con = DBUtils.getConnection();
-			ps = con.prepareStatement(sql);
-	        ps.setString(1,professsor.getProfessorName());
-	        ps.setString(2,professsor.getProfessorPassword());
-	        ps.setString(3,professsor.getProfessorDepartment());
-			int rs = ps.executeUpdate();
-			if(rs>0) {flag = true;}
-		} catch (SQLException e) {
-			System.err.println("Admin : Add Professor Error!");
-			e.printStackTrace();
- 		}
-//			finally{
-//            try{
-//               if(ps!=null)
-//                  ps.close();
-//            }catch(SQLException se2){
-//            	se2.printStackTrace();
-//            }
-//            try{
-//               if(con!=null)
-//                  con.close();
-//            }catch(SQLException se){
-//               se.printStackTrace();
-//            }//end finally try
-//		}
-		return flag;
-	}
-
-	public boolean addCourses(Course course) {
-		Connection con = null;
-		PreparedStatement ps = null;
-		String sql = Constants.AdminAddCourse;
-		boolean flag = false;
-		try {
-			con = DBUtils.getConnection();
-			ps = con.prepareStatement(sql);
-	        ps.setString(1,course.getCourseId());
-	        ps.setString(2,course.getCourseName());
-	        ps.setString(3,course.getCourseDescription());
-			int rs = ps.executeUpdate();
-			if(rs>0) {flag = true;}
-		} catch (SQLException e) {
-			System.err.println("Admin : Add Courses Error!");
-			e.printStackTrace();
- 		}
-		return flag;
-	}
-
-	public boolean removeCourses(String courseId) {
-		Connection con =null;
-		PreparedStatement ps = null;
-		String sql = Constants.AdminRemoveCourse;
-		boolean flag = false;
-		try {
-			con = DBUtils.getConnection();
-			ps = con.prepareStatement(sql);
-			ps.setString(1, courseId);
-			int rs = ps.executeUpdate();
-			if(rs>0) {flag = true;}
-		} catch (Exception e) {
-			System.err.println("Admin : Remove Course Error!");
-			e.printStackTrace();
-		}
-		return flag;
-	}
-
-	public List<GradeCard> getGradeCardDetails() {
-		Connection con = null;
-		String sql = Constants.AdminGetGradeCard;
-		List<GradeCard> gradeDetails = new ArrayList<GradeCard>();
-		try {
-			con = DBUtils.getConnection();
-			PreparedStatement ps = con.prepareStatement(sql);
-			ResultSet rs = ps.executeQuery();
-			while (rs.next()) {
-				GradeCard g = new GradeCard();
-				g.setStudentId(rs.getInt(2));
-				g.setStudentName(rs.getString(3));
-				g.setStudentDepartment(rs.getString(4));
-				g.setGradePoints(rs.getFloat(5));
-				g.setRemarks(rs.getString(6));
-				gradeDetails.add(g);
+			
+			String sql = Constants.VIEW_PROFESSOR_QUERY;
+			statement = connection.prepareStatement(sql);
+			ResultSet resultSet = statement.executeQuery();
+			
+			while(resultSet.next()) {
+				
+				Professor professor = new Professor();
+				professor.setUserId(resultSet.getString(1));
+				professor.setName(resultSet.getString(2));
+				professor.setGender(Gender.stringToGender(resultSet.getString(3)));
+				professor.setDepartment(resultSet.getString(4));
+				professor.setDesignation(resultSet.getString(5));
+				professor.setAddress(resultSet.getString(6));
+				professor.setRole(Role.PROFESSOR);
+				professor.setPassword("*********");
+				professorList.add(professor);
+				
 			}
-
-		} catch (SQLException e) {
-			System.err.println("Admin : Generate Grade Error!");
+			
+			logger.info(professorList.size() + " professors in the institute.");
+			
+		}catch(SQLException se) {
+			
+			logger.error(se.getMessage());
+			
 		}
-
-		return gradeDetails;
+		return professorList;
 	}
-
 }

@@ -1,16 +1,16 @@
 package com.lt.business;
 
+import com.lt.bean.Student;
+import com.lt.constants.Gender;
+import com.lt.exceptions.StudentNotRegisteredException;
+
 public interface StudentInterface {
 	
-	public void signUp();
 	
-	public void login();
-
-	public void viewGrade();
-
-	public void registerCourses();
+	public int register(Student student) throws StudentNotRegisteredException; 
 	
-	public void addCourses();
+	public int getStudentId(String userId);
 	
-	public void dropCourses();
-	}
+	
+    public boolean isApproved(int studentId);
+}
