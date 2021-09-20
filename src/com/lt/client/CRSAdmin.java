@@ -15,6 +15,23 @@ public class CRSAdmin {
 	AdminInterfaceImpl adminInterfaceImpl = new AdminInterfaceImpl();
 	Scanner scanner = new Scanner(System.in);
 	
+	private static CRSAdmin crsAdmin = null;
+	
+	//private Constructor for AdminInterfaceImpl
+			public CRSAdmin(){
+				logger.info("CRSAdmin Instance Created");
+			}
+			
+			//Singleton Implementation Method
+			public static CRSAdmin getInstance(){
+				if(crsAdmin==null){
+					synchronized (CRSAdmin.class){
+						crsAdmin = new CRSAdmin();
+					}
+				}
+				return crsAdmin;
+			}
+	
 	/**
 	 * Method to Create Admin Menu
 	 */
