@@ -4,6 +4,7 @@ import com.lt.bean.Course;
 import com.lt.bean.Grade;
 import com.lt.bean.RegisteredCourses;
 import com.lt.bean.Student;
+import com.lt.business.StudentInterfaceImpl;
 import com.lt.constants.Constants;
 import com.lt.exceptions.StudentNotRegisteredException;
 import com.lt.utils.DBUtils;
@@ -23,6 +24,22 @@ import org.apache.log4j.Logger;
 public class StudentDaoImpl implements StudentDao {
 	private static Logger logger = Logger.getLogger(StudentDaoImpl.class);
 	
+	private static volatile StudentDaoImpl instance=null;
+	private StudentDaoImpl()
+	{
+
+	}
+	
+	public static StudentDaoImpl getInstance()
+	{
+		if(instance==null)
+		{
+			synchronized(StudentDaoImpl.class){
+				instance=new StudentDaoImpl();
+			}
+		}
+		return instance;
+	}
 
 	public int addStudent(Student student) throws StudentNotRegisteredException{
 		Connection connection=DBUtils.getConnection();

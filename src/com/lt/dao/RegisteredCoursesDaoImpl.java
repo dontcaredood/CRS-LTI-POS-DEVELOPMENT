@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 
 import com.lt.bean.Course;
 import com.lt.bean.Grade;
+import com.lt.business.RegisteredCoursesInterfaceImpl;
 import com.lt.constants.Constants;
 import com.lt.constants.ModeOfPayment;
 import com.lt.utils.DBUtils;
@@ -18,7 +19,19 @@ public class RegisteredCoursesDaoImpl implements RegisteredCoursesDao{
 	private static Logger logger = Logger.getLogger(RegisteredCoursesDaoImpl.class);
 	private PreparedStatement stmt = null;
 	
-	
+	private static volatile RegisteredCoursesDaoImpl instance = null;
+
+	private RegisteredCoursesDaoImpl() {
+	}
+
+	public static RegisteredCoursesDaoImpl getInstance() {
+		if (instance == null) {
+			synchronized (RegisteredCoursesDaoImpl.class) {
+				instance = new RegisteredCoursesDaoImpl();
+			}
+		}
+		return instance;
+	}
 	/**
 	 * Method to add course in database
 	 * @param courseCode

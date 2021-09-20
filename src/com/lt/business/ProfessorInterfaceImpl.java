@@ -21,9 +21,30 @@ import com.lt.dao.ProfessorDaoImpl;
 import com.lt.exceptions.GradeNotAddedException;
 
 public class ProfessorInterfaceImpl implements ProfessorInterface{
-	ProfessorDaoImpl professorDaoImpl = new ProfessorDaoImpl();
 	private static Logger logger = Logger.getLogger(ProfessorInterfaceImpl.class);
 	
+	private static volatile ProfessorInterfaceImpl instance=null;
+	ProfessorDaoImpl professorDaoImpl= ProfessorDaoImpl.getInstance();
+	private ProfessorInterfaceImpl()
+	{
+
+	}
+	
+	/**
+	 * Method to make ProfessorOperation Singleton
+	 * @return
+	 */
+	public static ProfessorInterfaceImpl getInstance()
+	{
+		if(instance==null)
+		{
+			// This is a synchronized block, when multiple threads will access this instance
+			synchronized(ProfessorInterfaceImpl.class){
+				instance=new ProfessorInterfaceImpl();
+			}
+		}
+		return instance;
+	}
 	public boolean addGrade(int studentId,String courseCode,String grade) throws GradeNotAddedException {
 		try
 		{

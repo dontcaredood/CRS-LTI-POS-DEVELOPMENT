@@ -13,20 +13,29 @@ import com.lt.dao.NotificationDaoImpl;
  * @author JEDI-03
  * This method implements all the method related to the notification system
  */
-public class NotificationOperation implements NotificationInterface {
+public class NotificationInterfaceImpl implements NotificationInterface {
 
-	private static volatile NotificationOperation instance=null;
-	NotificationDaoImpl notificationDaoInterface= new NotificationDaoImpl();
-	private static Logger logger = Logger.getLogger(NotificationOperation.class);
 	
-	/**
-	 * Method to send notification
-	 * @param type: type of the notification to be sent
-	 * @param studentId: student to be notified
-	 * @param modeOfPayment: payment mode used
-	 * @return notification id for the record added in the database
-	 */
-	@Override
+	private static volatile NotificationInterfaceImpl instance=null;
+	NotificationDaoImpl notificationDaoInterface = NotificationDaoImpl.getInstance();
+	private static Logger logger = Logger.getLogger(NotificationInterfaceImpl.class);
+	private NotificationInterfaceImpl()
+	{
+
+	}
+	
+	public static NotificationInterfaceImpl getInstance()
+	{
+		if(instance==null)
+		{
+			synchronized(NotificationInterfaceImpl.class){
+				instance=new NotificationInterfaceImpl();
+			}
+		}
+		return instance;
+	}
+	
+	
 	public int sendNotification(NotificationType type, int studentId,ModeOfPayment modeOfPayment,String paymentMethod,double amount) {
 		int notificationId=0;
 		try
@@ -41,12 +50,7 @@ public class NotificationOperation implements NotificationInterface {
 		return notificationId;
 	}
 
-	/**
-	 * Method to return UUID for a transaction
-	 * @param notificationId: notification id added in the database
-	 * @return transaction id of the payment
-	 */
-	@Override
+	
 	public UUID getReferenceId(int notificationId) {
 		// TODO Auto-generated method stub
 		return null;

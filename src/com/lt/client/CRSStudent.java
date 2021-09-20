@@ -8,7 +8,7 @@ import org.apache.log4j.Logger;
 
 import com.lt.bean.Course;
 import com.lt.bean.Grade;
-import com.lt.business.NotificationOperation;
+import com.lt.business.*;
 import com.lt.business.ProfessorInterfaceImpl;
 import com.lt.business.RegisteredCoursesInterfaceImpl;
 import com.lt.constants.ModeOfPayment;
@@ -21,9 +21,9 @@ public class CRSStudent {
 
 	private static Logger logger = Logger.getLogger(CRSStudent.class);
 	Scanner sc = new Scanner(System.in);
-	ProfessorInterfaceImpl professorInterface = new ProfessorInterfaceImpl();
-	RegisteredCoursesInterfaceImpl registrationInterface = new RegisteredCoursesInterfaceImpl();
-	//NotificationInterface notificationInterface=NotificationOperation.getInstance();
+	ProfessorInterfaceImpl professorInterface =  ProfessorInterfaceImpl.getInstance();
+	RegisteredCoursesInterfaceImpl registrationInterface =  RegisteredCoursesInterfaceImpl.getInstance();
+	NotificationInterfaceImpl notificationInterfaceImpl = NotificationInterfaceImpl.getInstance();
 	private boolean is_registered;
 	
 	/**
@@ -400,7 +400,7 @@ public class CRSStudent {
 					{
 						
 						  try { 
-							  new NotificationOperation().sendNotification(NotificationType.PAYMENT, studentId, mode,paymentMethod, fee); } catch (Exception e) {
+							  notificationInterfaceImpl.sendNotification(NotificationType.PAYMENT, studentId, mode,paymentMethod, fee); } catch (Exception e) {
 						  
 						  System.out.println(e.getMessage()); }
 						 
@@ -427,7 +427,7 @@ public class CRSStudent {
 					{
 						
 						  try { 
-							  new NotificationOperation().sendNotification(NotificationType.PAYMENT, studentId, mode,paymentMethod, fee); } catch (Exception e) {
+							  notificationInterfaceImpl.sendNotification(NotificationType.PAYMENT, studentId, mode,paymentMethod, fee); } catch (Exception e) {
 						  
 						  System.out.println(e.getMessage()); }
 						 

@@ -14,6 +14,23 @@ import com.lt.utils.DBUtils;
 
 public class UserDaoImpl implements UserDao{
 	private static Logger logger = Logger.getLogger(UserDaoImpl.class);
+	private static volatile UserDaoImpl instance=null;
+	private UserDaoImpl()
+	{
+
+	}
+	
+	public static UserDaoImpl getInstance()
+	{
+		if(instance==null)
+		{
+			synchronized(UserDaoImpl.class){
+				instance=new UserDaoImpl();
+			}
+		}
+		return instance;
+	}
+
 	/**
 	 * Method to update password of user in DataBase
 	 * @param userID

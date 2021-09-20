@@ -3,10 +3,26 @@ import com.lt.dao.*;
 import com.lt.exceptions.UserNotFoundException;
 
 public class UserInterfaceImpl implements UserInterface{
-	UserDaoImpl UserDaoImpl = new UserDaoImpl();
 	
+	private static volatile UserInterfaceImpl instance=null;
+	UserDaoImpl userDaoImpl =  UserDaoImpl.getInstance();
+	private UserInterfaceImpl()
+	{
+
+	}
+	
+	public static UserInterfaceImpl getInstance()
+	{
+		if(instance==null)
+		{
+			synchronized(UserInterfaceImpl.class){
+				instance=new UserInterfaceImpl();
+			}
+		}
+		return instance;
+	}
 	public boolean updatePassword(String userID,String newPassword) {
-		return UserDaoImpl.updatePassword(userID, newPassword);
+		return userDaoImpl.updatePassword(userID, newPassword);
 	}
 
 
@@ -14,7 +30,7 @@ public class UserInterfaceImpl implements UserInterface{
 		//DAO class
 		try
 		{
-			return UserDaoImpl.verifyCredentials(userID, password);		
+			return userDaoImpl.verifyCredentials(userID, password);		
 		}
 		finally
 		{
@@ -24,7 +40,7 @@ public class UserInterfaceImpl implements UserInterface{
 	
 	
 	public String getRole(String userId) {
-		return UserDaoImpl.getRole(userId);
+		return userDaoImpl.getRole(userId);
 	}
 
 
