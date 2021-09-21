@@ -141,18 +141,18 @@ public class CRSApplication {
 				switch(userRole)
 				{
 				case ADMIN:
-					System.out.println(formattedDate + " Login Successful");
+					System.out.println(formattedDate +" "+ userRole+" Login Successful");
 					CRSAdmin adminMenu=new CRSAdmin();
 					adminMenu.createMenu();
 					break;
 				case PROFESSOR:
-					System.out.println(formattedDate + " Login Successful");
+					System.out.println(formattedDate +" "+userRole+ " Login Successful");
 					CRSProfessor professorMenu=new CRSProfessor();
 					professorMenu.createMenu(userId);
 					
 					break;
 				case STUDENT:
-					System.out.println(formattedDate + " Login Successful");
+					System.out.println(formattedDate + " "+userRole+" Login Successful");
 					int studentId=studentInterfaceImpl.getStudentId(userId);
 					boolean isApproved=studentInterfaceImpl.isApproved(studentId);
 					if(isApproved)
